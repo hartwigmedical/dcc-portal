@@ -78,22 +78,22 @@
     };
 
     _ctrl.donor.clinicalXML = null;
-    promise = ExternalRepoService.getList({
-      filters: {
-        file: {
-          donorId: {is: [_ctrl.donor.id]},
-          fileFormat: {is: ['XML']}
-        }
-      }
-    });
-    promise.then (function (results) {
-      var fileCopy = _.get (results, 'hits[0].fileCopies[0]', undefined);
-
-      if (_.isPlainObject (fileCopy)) {
-        _ctrl.donor.clinicalXML = fileCopy.repoBaseUrl.replace (/\/$/, '') +
-          fileCopy.repoDataPath + fileCopy.fileName;
-      }
-    });
+//    promise = ExternalRepoService.getList({
+//      filters: {
+//        file: {
+//          donorId: {is: [_ctrl.donor.id]},
+//          fileFormat: {is: ['XML']}
+//        }
+//      }
+//    });
+//    promise.then (function (results) {
+//      var fileCopy = _.get (results, 'hits[0].fileCopies[0]', undefined);
+//
+//      if (_.isPlainObject (fileCopy)) {
+//        _ctrl.donor.clinicalXML = fileCopy.repoBaseUrl.replace (/\/$/, '') +
+//          fileCopy.repoDataPath + fileCopy.fileName;
+//      }
+//    });
 
     _ctrl.downloadDonorData = function() {
       $modal.open({
@@ -282,7 +282,7 @@
     _ctrl.setActive();
   });
 
-module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state, $stateParams, 
+module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state, $stateParams,
   $location, RouteInfoService, LocationService, ExternalRepoService, FilterService) {
 
     var _ctrl = this,
@@ -476,14 +476,14 @@ module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state
     };
 
     _ctrl.getFiles = function (){
-      var promise, 
+      var promise,
         params = {},
         filesParam = LocationService.getJqlParam ('files');
 
       // Default
       params.from = 1;
       params.size = 10;
-      
+
       if (filesParam.from || filesParam.size) {
         params.from = filesParam.from;
         params.size = filesParam.size;
