@@ -26,14 +26,12 @@ spring.profiles: test
 
 # Datasource
 spring.datasource:
-  driver-class-name: org.h2.Driver
-  # url: jdbc:h2:mem:portal;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;INIT=runscript from 'classpath:sql/schema.sql'
-  url: jdbc:h2:file:${java.io.tmpdir}/db;MULTI_THREADED=TRUE;AUTO_SERVER=TRUE;MODE=PostgreSQL;INIT=runscript from 'classpath:sql/schema.sql'
-  username:
-  password:
-  max-active: 10
-  max-idle: 1
-  min-idle: 1
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5532/dcc_portal
+  username: dcc
+  password: dcc
+  max-active: 32
+  validation-query: "/* Portal DB Health Check */ SELECT 1"
 
 # Authorization
 crowd:
@@ -81,17 +79,17 @@ hazelcast:
 
 # ElasticSearch index and hosts
 elastic:
-  indexName: icgc-release
+  indexName: icgc23
   repoIndexName: icgc-repository
   nodeAddresses:
     - host: localhost
-      port: 9300
+      port: 9401
       
   # List of TransportClient settings. 
   # E.g. 
   # "client.transport.sniff": true 
   client:
-    "client.transport.sniff": true
+    "client.transport.sniff": false
 
 # Mail
 mail:
