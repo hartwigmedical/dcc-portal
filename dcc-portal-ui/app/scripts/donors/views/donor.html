@@ -5,18 +5,6 @@
     </h1>
 </div>
 
-<span data-ng-if="DonorCtrl.isPendingDonor">
-  <section>
-    <i class="icon-attention or icon-attention-1"></i>
-    <translate>No data for this donor has been submitted directly to ICGC DCC yet.</translate>
-    <translate has-markup>However, go to the
-    <a href="{{:: DonorCtrl.urlToExternalRepository() }}">
-      {{:: DonorCtrl.dataRepoTitle }} browser
-    </a>
-     to see the list of data files hosted in {{:: DonorCtrl.dataRepoTitle }} for this donor.</translate>
-  </section>
-</span>
-
 <span data-ng-if="!DonorCtrl.isPendingDonor">
 <div data-scroll-spy="">
 <aside data-ui-scrollpoint=79 class="t_sidenav">
