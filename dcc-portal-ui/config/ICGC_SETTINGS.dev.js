@@ -3,7 +3,7 @@
 module.exports = {
     "releaseDate": "April 25th, 2016",
     "dataVersion": 2,
-    "downloadEnabled": true,
+    "downloadEnabled": false,
     "authEnabled": true,
     "ssoUrl": "https://icgc.org/user?continue=",
     "ssoUrlGoogle": "https://icgc.org/gooapi/redirect?continue=",
