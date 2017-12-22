@@ -383,33 +383,33 @@
     </div>
 </section>
 
-<section id="files-section"
-    data-ng-controller="DonorFilesCtrl as DonorFilesCtrl"
-    data-ng-class="{'loading': !DonorFilesCtrl.files.hits, 'empty': DonorFilesCtrl.files.hits.length == 0}"
-    fix-scroll>
+<!--<section id="files-section"-->
+    <!--data-ng-controller="DonorFilesCtrl as DonorFilesCtrl"-->
+    <!--data-ng-class="{'loading': !DonorFilesCtrl.files.hits, 'empty': DonorFilesCtrl.files.hits.length == 0}"-->
+    <!--fix-scroll>-->
 
-    <h3 data-ng-if="!DonorFilesCtrl.files.hits">
-        <i class="icon-spinner icon-spin"></i>
-        <translate>Loading Files...</translate>
-    </h3>
+    <!--<h3 data-ng-if="!DonorFilesCtrl.files.hits">-->
+        <!--<i class="icon-spinner icon-spin"></i>-->
+        <!--<translate>Loading Files...</translate>-->
+    <!--</h3>-->
 
-    <h3 data-ng-if="DonorFilesCtrl.files.hits.length == 0"><translate>No Files Found.</translate></h3>
+    <!--<h3 data-ng-if="DonorFilesCtrl.files.hits.length == 0"><translate>No Files Found.</translate></h3>-->
 
-    <div data-ng-if="DonorFilesCtrl.files.hits.length > 0">
-        <h3>
-            <translate>Files</translate>
-            <span class="pull-right action-toolbar">
-                <span class="action-item">
-                    <i class="icon-download-cloud"></i>
-                    <a href='/repositories?filters={"donor":{"id":{"is":["{{DonorFilesCtrl.donorId}}"]}}}'>
-                        <translate>View in Data Repositories</translate>
-                    </a>
-                </span>
-            </span>
-        </h3>
-        <div data-ng-include="'scripts/donors/views/donor.files.html'"></div>
-    </div>
-</section>
+    <!--<div data-ng-if="DonorFilesCtrl.files.hits.length > 0">-->
+        <!--<h3>-->
+            <!--<translate>Files</translate>-->
+            <!--<span class="pull-right action-toolbar">-->
+                <!--<span class="action-item">-->
+                    <!--<i class="icon-download-cloud"></i>-->
+                    <!--<a href='/repositories?filters={"donor":{"id":{"is":["{{DonorFilesCtrl.donorId}}"]}}}'>-->
+                        <!--<translate>View in Data Repositories</translate>-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</span>-->
+        <!--</h3>-->
+        <!--<div data-ng-include="'scripts/donors/views/donor.files.html'"></div>-->
+    <!--</div>-->
+<!--</section>-->
 
 </article>
 </div>
