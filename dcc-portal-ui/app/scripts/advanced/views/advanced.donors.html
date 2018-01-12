@@ -81,33 +81,6 @@
                         <translate>OncoGrid</translate>
                     </a>
                </span>
-               <span class="action-item" data-ng-if="!ICGC_SETTINGS.downloadEnabled">
-                   <i class="icon-download"></i><span><translate has-markup>Data download is<br> currently unavailable</translate></span>
-               </span>
-               <span class="action-item" data-ng-if="ICGC_SETTINGS.downloadEnabled">
-                   <span>
-                      <i class="icon-download"></i>
-                      <a
-                        href=""
-                        data-ng-click="AdvancedCtrl.downloadDonorData(); track('download-donor-data', { action: 'click' });"
-                      >
-                        <translate>Download Donor Data</translate>
-                      </a>
-                   </span>
-               </span>
-               <span class="action-item">
-                   <span>
-                      <i class="icon-download-cloud"></i><span>
-                      <a
-                        href=""
-                        data-ng-click="
-                            AdvancedCtrl.viewExternalDonors(AdvancedCtrl.Donor.donors.pagination.total);
-                            track('advanced-search-links', { action: 'click-view-in-repo' });
-                        "
-                      >
-                      <translate>View in</translate> {{:: AdvancedCtrl.dataRepoTitle }}</a></span>
-                   </span>
-               </span>
                <span class="action-item">
                     <entityset-persistence-dropdown
                         selected-entity-ids="AdvancedCtrl.selectedEntityIdsMap.donor"
