@@ -31,7 +31,6 @@
         </tr>
         <tr>
             <th><translate>Sample ID</translate></th>
-            <th><translate>Matched Sample ID</translate></th>
             <th><translate>Platform</translate></th>
             <th><translate>Verification Status</translate></th>
             <th>&nbsp;</th>
@@ -55,11 +54,6 @@
             <td>
                 <ul>
                     <li data-ng-repeat="observation in occurrence.observations">{{observation.icgcSampleId}}</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li data-ng-repeat="observation in occurrence.observations">{{observation.matchedICGCSampleId || "--"}}</li>
                 </ul>
             </td>
             <td>
@@ -94,7 +88,6 @@
             <th><translate>Project</translate></th>
             <th><translate>DNA change</translate></th>
             <th><translate>Sample ID</translate></th>
-            <th><translate>Matched Sample ID</translate></th>
             <th><translate>Platform</translate></th>
             <th><translate>Verification Status</translate></th>
         </tr>
@@ -106,7 +99,6 @@
             <td>{{occurrence.projectId}}</td>
             <td>chr{{occurrence.chromosome}}:g.{{occurrence.start}}{{occurrence.mutation}}</td>
             <td>{{ (occurrence.observations | _:"map":'icgcSampleId').join(',') }}</td>
-            <td>{{ (occurrence.observations | _:"map":'matchedICGCSampleId').join(',') }}</td>
             <td>{{ (occurrence.observations | _:"map":'platform').join(',') }}</td>
             <td>{{ (occurrence.observations | _:"map":'verificationStatus').join(',') }}</td>
         </tr>
