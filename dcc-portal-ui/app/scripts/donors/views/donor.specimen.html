@@ -146,7 +146,6 @@
                     <th><translate>Sample ID</translate></th>
                     <th><translate>Submitted Sample ID</translate></th>
                     <th><translate>Study</translate></th>
-                    <th><translate>Interval<br>(days)</translate></th>
                     <th><translate>Analysis</translate></th>
                     <th><translate>Sequence Repo</translate></th>
                     <th><translate>BAM File</translate></th>
@@ -168,11 +167,6 @@
                             data-ng-bind-html="sample.uiStudy ? (sample.uiStudy  | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples) : '--'">
                         </span>
                     </td>
-                    </td>
-                    <td>
-                        <span data-ng-if="sample.uiAnalyzedInterval"
-                            data-ng-bind-html="sample.uiAnalyzedIntervalFiltered | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples"></span>
-                        <span data-ng-if="!sample.uiAnalyzedInterval">--</span>
                     </td>
                     <td>
                         <ul>
@@ -219,7 +213,6 @@
                     <th><translate>Sample ID</translate></th>
                     <th><translate>Submitted Sample ID</translate></th>
                     <th><translate>Study</translate></th>
-                    <th><translate>Interval (days)</translate></th>
                     <th><translate>Analysis</translate></th>
                     <th><translate>Sequence Repo</translate></th>
                     <th><translate>BAM File Access</translate></th>
@@ -230,7 +223,6 @@
                     <td>{{sample.id}}</td>
                     <td>{{sample.analyzedId}}</td>
                     <td>{{sample.study}}</td>
-                    <td>{{sample.analyzedInterval}}</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'libraryStrategy').join(', ') }}</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'repository').join(', ') }}</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'id').join(', ') }}</td>
