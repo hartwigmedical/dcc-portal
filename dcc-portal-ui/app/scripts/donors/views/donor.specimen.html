@@ -186,17 +186,18 @@
                         </ul>
                         <span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">--</span>
                     </td>
-                    <td>
-                        <ul>
-                            <li data-ng-repeat="item in sample.uiUniqueRawSequenceData">
-                            <i data-ng-if="item.id" style="cursor: pointer" class="icon-file-alt"
-                                   data-tooltip-placement="left"
-                                   data-icgc-tooltip="{{ item.id }}"></i>
-                                <span data-ng-if="!item.id">--</span>
-                            </li>
-                        </ul>
-                        <span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">--</span>
-                    </td>
+                    <!--<td>-->
+                        <!--<ul>-->
+                            <!--<li data-ng-repeat="item in sample.uiUniqueRawSequenceData">-->
+                            <!--<i data-ng-if="item.id" style="cursor: pointer" class="icon-file-alt"-->
+                                   <!--data-tooltip-placement="left"-->
+                                   <!--data-icgc-tooltip="{{ item.id }}"></i>-->
+                                <!--<span data-ng-if="!item.id">&#45;&#45;</span>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">&#45;&#45;</span>-->
+                    <!--</td>-->
+                    <td class="text-center"><i class="icon-ok"></i></td>
                 </tr>
                 </tbody>
             </table>
