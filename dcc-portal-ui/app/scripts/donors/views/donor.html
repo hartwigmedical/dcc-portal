@@ -59,22 +59,6 @@
                 <th><translate>Primary Site</translate></th>
                 <td>{{ DonorCtrl.donor.primarySite }}</td>
             </tr>
-            <tr>
-                <th><translate>Tumour Type</translate></th>
-                <td>{{ DonorCtrl.donor.tumourType }}</td>
-            </tr>
-            <tr>
-                <th><translate>Tumour Subtype</translate></th>
-                <td>{{ DonorCtrl.donor.tumourSubtype }}</td>
-            </tr>
-            <tr>
-                <th><translate>Total number of mutations</translate></th>
-                <td><a data-ng-if="DonorCtrl.donor.ssmCount > 0"
-                       href='/search/m?filters={"donor":{"id":{"is":["{{DonorCtrl.donor.id}}"]}}}'>
-                    {{ DonorCtrl.donor.ssmCount | numberPT }}</a>
-                    <span data-ng-if="!DonorCtrl.donor.ssmCount">--</span>
-                </td>
-            </tr>
         </table>
     </div>
     <div class="half omega">
@@ -112,76 +96,32 @@
     <div class="half">
         <table class="table table-info">
             <tr>
-                <th><translate>Age at Diagnosis</translate></th>
-                <td>{{ DonorCtrl.donor.ageAtDiagnosis | numberPT }}</td>
-            </tr>
-            <tr>
                 <th><translate>Age at enrollment</translate></th>
                 <td>{{ DonorCtrl.donor.ageAtEnrollment | numberPT }}</td>
-            </tr>
-            <tr>
-                <th><translate>Age at last followup</translate></th>
-                <td>{{ DonorCtrl.donor.ageAtLastFollowup | numberPT }}</td>
-            </tr>
-            <tr>
-                <th><translate>Diagnosis ICD-10 code</translate></th>
-                <td>{{ DonorCtrl.donor.diagnosisIcd10 }}</td>
-            </tr>
-            <tr>
-                <th><translate>Disease status at last followup</translate></th>
-                <td>{{ DonorCtrl.donor.diseaseStatusLastFollowup }}</td>
-            </tr>
-            <tr>
-                <th><translate>Interval of last followup (days)</translate></th>
-                <td>{{ DonorCtrl.donor.intervalOfLastFollowup | numberPT }}</td>
             </tr>
             <tr>
                 <th><translate>Gender</translate></th>
                 <td>{{ DonorCtrl.donor.gender }}</td>
             </tr>
             <tr>
-                <th><translate>Vital status</translate></th>
-                <td>{{ DonorCtrl.donor.vitalStatus }}</td>
-            </tr>
-        </table>
-    </div>
-    <div class="half omega">
-        <table class="table table-info">
-            <tr>
-                <th><translate>Tumour stage at diagnosis</translate></th>
-                <td>{{ DonorCtrl.donor.tumourStageAtDiagnosis }}</td>
+                <th><translate>Tumour Type</translate></th>
+                <td>{{ DonorCtrl.donor.tumourType }}</td>
             </tr>
             <tr>
-                <th><translate>Tumour staging system at diagnosis</translate></th>
-                <td>{{ DonorCtrl.donor.tumourStagingSystemAtDiagnosis }}</td>
+                <th><translate>Tumour Subtype</translate></th>
+                <td>{{ DonorCtrl.donor.tumourSubtype }}</td>
             </tr>
             <tr>
-                <th><translate>Tumour stage at diagnosis supplemental</translate></th>
-                <td>{{ DonorCtrl.donor.tumourStageAtDiagnosisSupplemental }}</td>
+                <th><translate>Diagnosis ICD-10 code</translate></th>
+                <td>{{ DonorCtrl.donor.diagnosisIcd10 }}</td>
             </tr>
             <tr>
-                <th><translate>Relapse Type</translate></th>
-                <td>{{ DonorCtrl.donor.relapseType }}</td>
-            </tr>
-            <tr>
-                <th><translate>Relapse interval (days)</translate></th>
-                <td>{{ DonorCtrl.donor.relapseInterval | numberPT }}</td>
-            </tr>
-            <tr>
-                <th><translate>Survival time (days)</translate></th>
-                <td>{{ DonorCtrl.donor.survivalTime | numberPT }}</td>
-            </tr>
-            <tr>
-                <th><translate>Prior Malignancy</translate></th>
-                <td>{{ DonorCtrl.donor.priorMalignancy }}</td>
-            </tr>
-            <tr>
-                <th><translate>Cancer Type Prior Malignancy</translate></th>
-                <td>{{ DonorCtrl.donor.cancerTypePriorMalignancy }}</td>
-            </tr>
-            <tr>
-                <th><translate>Cancer history first degree relative</translate></th>
-                <td>{{ DonorCtrl.donor.cancerHistoryFirstDegreeRelative }}</td>
+                <th><translate>Total number of mutations</translate></th>
+                <td><a data-ng-if="DonorCtrl.donor.ssmCount > 0"
+                       href='/search/m?filters={"donor":{"id":{"is":["{{DonorCtrl.donor.id}}"]}}}'>
+                    {{ DonorCtrl.donor.ssmCount | numberPT }}</a>
+                    <span data-ng-if="!DonorCtrl.donor.ssmCount">--</span>
+                </td>
             </tr>
         </table>
     </div>
