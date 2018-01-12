@@ -627,7 +627,7 @@
                     <abbr data-icgc-tooltip="{{'Survival Time in days' | translate}}"><translate has-markup>Survival<br>(days)</translate></abbr>
                 </th>
                 <th rowspan="2"><abbr data-icgc-tooltip="{{'Experimental analysis performed' | translate}}"><translate>Analysis</translate></abbr></th>
-                <th colspan="11" class="text-center"><translate>Available Data Types:</translate></th>
+                <th colspan="3" class="text-center"><translate>Available Data Types:</translate></th>
                 <th rowspan="2" data-icgc-tooltip="{{'Number of SSM' | translate}}"><abbr><translate># Mutations</translate></abbr></th>
                 <th rowspan="2"
                     data-sortable
@@ -644,14 +644,6 @@
                 <th data-icgc-tooltip="{{ 'ssm' | datatype }}"><abbr class="tiny-header">SSM</abbr></th>
                 <th data-icgc-tooltip="{{ 'cnsm' | datatype }}"><abbr class="tiny-header">CNSM</abbr></th>
                 <th data-icgc-tooltip="{{ 'stsm' | datatype }}"><abbr class="tiny-header">StSM</abbr></th>
-                <th data-icgc-tooltip="{{ 'sgv' | datatype }}"><abbr class="tiny-header">SGV</abbr></th>
-                <th data-icgc-tooltip="{{ 'meth_array' | datatype }}"><abbr class="tiny-header">METH-A</abbr></th>
-                <th data-icgc-tooltip="{{ 'meth_seq' | datatype }}"><abbr class="tiny-header">METH-S</abbr></th>
-                <th data-icgc-tooltip="{{ 'exp_array' | datatype }}"><abbr class="tiny-header">EXP-A</abbr></th>
-                <th data-icgc-tooltip="{{ 'exp_seq' | datatype }}"><abbr class="tiny-header">EXP-S</abbr></th>
-                <th data-icgc-tooltip="{{ 'pexp' | datatype }}"><abbr class="tiny-header">PEXP</abbr></th>
-                <th data-icgc-tooltip="{{ 'mirna_seq' | datatype }}"><abbr class="tiny-header">miRNA-S</abbr></th>
-                <th data-icgc-tooltip="{{ 'jcn' | datatype }}"><abbr class="tiny-header">JCN</abbr></th>
             </tr>
             </thead>
             <tbody>
@@ -666,14 +658,6 @@
                 <td class="text-center"><span data-exists="donor.ssmCount"></span></td>
                 <td class="text-center"><span data-exists="donor.cnsmExists"></span></td>
                 <td class="text-center"><span data-exists="donor.stsmExists"></span></td>
-                <td class="text-center"><span data-exists="donor.sgvExists"></span></td>
-                <td class="text-center"><span data-exists="donor.methArrayExists"></span></td>
-                <td class="text-center"><span data-exists="donor.methSeqExists"></span></td>
-                <td class="text-center"><span data-exists="donor.expArrayExists"></span></td>
-                <td class="text-center"><span data-exists="donor.expSeqExists"></span></td>
-                <td class="text-center"><span data-exists="donor.pexpExists"></span></td>
-                <td class="text-center"><span data-exists="donor.mirnaSeqExists"></span></td>
-                <td class="text-center"><span data-exists="donor.jcnExists"></span></td>
                 <td class="text-right">
                     <i data-ng-if="ProjectDonorsCtrl.mutationCounts===null"
                        class="icon-spinner icon-spin"></i>
@@ -707,14 +691,6 @@
                 <th>SSM</th>
                 <th>CNSM</th>
                 <th>StSM</th>
-                <th>SGV</th>
-                <th>METH-A</th>
-                <th>METH-S</th>
-                <th>EXP-A</th>
-                <th>EXP-S</th>
-                <th>PEXP</th>
-                <th>miRNA-S</th>
-                <th>JCN</th>
                 <th><translate>Mutations</translate></th>
                 <th><translate>Mutated Genes</translate></th>
             </tr>
@@ -731,14 +707,6 @@
                 <td>{{donor.ssmCount? 'True': 'False'}}</td>
                 <td>{{donor.cnsmExists? 'True':'False'}}</td>
                 <td>{{donor.stsmExists? 'True':'False'}}</td>
-                <td>{{donor.sgvExists? 'True':'False'}}</td>
-                <td>{{donor.methArrayExists? 'True':'False'}}</td>
-                <td>{{donor.methSeqExists? 'True':'False'}}</td>
-                <td>{{donor.expArrayExists? 'True':'False'}}</td>
-                <td>{{donor.expSeqExists? 'True':'False'}}</td>
-                <td>{{donor.pexpExists? 'True':'False'}}</td>
-                <td>{{donor.mirnaSeqExists? 'True':'False'}}</td>
-                <td>{{donor.jcnExists? 'True':'False'}}</td>
                 <td>{{ProjectDonorsCtrl.mutationCounts[donor.id]}}</td>
                 <td>{{donor.ssmAffectedGenes}}</td>
             </tr>
