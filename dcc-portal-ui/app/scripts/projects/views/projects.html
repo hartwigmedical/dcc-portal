@@ -14,10 +14,8 @@
                 data-facet-name="primaryCountries"
                 data-label="{{'Country' | translate}}"
                 data-facet="ProjectsCtrl.projects.facets.primaryCountries" />
-            <div data-disable-events="ProjectsCtrl.state.isTab('history')" >
               <terms data-type="project" data-facet-name="availableDataTypes" data-defined="true" data-label="{{'Available Data Type' | translate}}"
                      data-facet="ProjectsCtrl.projects.facets.availableDataTypes"></terms>
-            </div>
             <terms data-type="project" data-facet-name="tumourType" data-defined="true" data-label="{{'Tumour Type' | translate}}"
                      data-facet="ProjectsCtrl.projects.facets.tumourType"></terms>
         </ul>
@@ -42,13 +40,6 @@
              data-href="projects/details" >
             <translate>Details</translate>
         </div>
-      <div class="t_tabs__tab t_tabs__tab__history"
-             data-nested
-             data-ng-click="ProjectsCtrl.state.setTab('history')"
-             data-ng-class="{active: ProjectsCtrl.state.isTab('history')}"
-             data-href="projects/history" >
-            <translate>History</translate>
-        </div>
     </div>
 
     <section>
@@ -61,11 +52,6 @@
              data-ng-if="ProjectsCtrl.state.hasVisitedTab('details')"
              data-ng-class="{active: ProjectsCtrl.state.isTab('details')}"
              data-ng-include="'scripts/projects/views/projects.details.html'">
-      </div>
-      <div class='t_tab_pane'
-             data-ng-if="ProjectsCtrl.state.hasVisitedTab('history')"
-             data-ng-class="{active: ProjectsCtrl.state.isTab('history')}"
-             data-ng-include="'scripts/projects/views/projects.history.html'">
       </div>
     </section>
 </div>
