@@ -114,9 +114,6 @@
                 </th>
                 <th rowspan="2" data-sortable data-type="donors" data-field="tumourStageAtDiagnosis">
                     <abbr data-icgc-tooltip="{{'Tumour Stage at Diagnosis' | translate}}"><translate>Stage</translate></abbr></th>
-                <th rowspan="2" data-sortable data-type="donors" data-field="survivalTime" class="text-center">
-                    <abbr data-icgc-tooltip="{{'Survival Time in days' | translate}}"><translate has-markup>Survival<br>(days)</translate></abbr>
-                </th>
                 <th colspan="3" class="text-center"><translate>Available Data Types:</translate></th>
                 <th rowspan="2">
                     <abbr data-icgc-tooltip="{{'Number of SSM<br>Filtered by Current Search Criteria' | translate}}"><translate># Mutations</translate></abbr></th>
@@ -155,7 +152,6 @@
                 <td>{{ donor.gender | readable }}</td>
                 <td class="text-right">{{ donor.ageAtDiagnosis }}</td>
                 <td class="text-right">{{ donor.tumourStageAtDiagnosis }}</td>
-                <td class="text-right">{{ donor.survivalTime | numberPT }}</td>
                 <td style="text-align:center">
                     <span data-exists="donor.ssmCount"></span>
                 </td>
@@ -193,7 +189,6 @@
                 <td><translate>Gender</translate></td>
                 <td><translate>Age at Diagnosis</translate></td>
                 <td><translate>Tumor Stage at Diagnosis</translate></td>
-                <td><translate>Survival Time (days)</translate></td>
                 <td>SSM</td>
                 <td>CNSM</td>
                 <td>STSM</td>
@@ -209,7 +204,6 @@
                 <td>{{ donor.gender | readable }}</td>
                 <td>{{ donor.ageAtDiagnosis }}</td>
                 <td>{{ donor.tumourStageAtDiagnosis }}</td>
-                <td>{{ donor.survivalTime }}</td>
                 <td>{{ donor.ssmCount? 'True': 'False' }} </td>
                 <td>{{ donor.cnsmExists? 'True': 'False'}}</td>
                 <td>{{ donor.stsmExists? 'True': 'False'}}</td>
