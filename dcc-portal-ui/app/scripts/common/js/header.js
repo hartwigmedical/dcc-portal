@@ -34,7 +34,7 @@
       return 't_nav__items__item__' + name;
     }
 
-    var items = _.map (['home', 'projects', 'advancedSearch', 'dataAnalysis', 'dataReleases', 'dataRepositories'],
+    var items = _.map (['home', 'projects', 'advancedSearch', 'dataAnalysis'],
       RouteInfoService.get);
     var itemAttributes = [{
         icon: 'icon-home',
@@ -48,12 +48,6 @@
       }, {
         icon: 'icon-beaker',
         styleClass: styleClass ('analysis')
-      }, {
-        icon: 'icon-database',
-        styleClass: styleClass ('download')
-      }, {
-        icon: 'icon-download-cloud',
-        styleClass: styleClass ('data_repositories')
       }];
     /*
      * Since _.zipWith was introduced in lodash 3.8.0 and we're still using 3.7.x, this is
