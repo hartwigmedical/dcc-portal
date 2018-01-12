@@ -143,30 +143,14 @@
       'totalDonorCount',
       'ssmTestedDonorCount',
       'cnsmTestedDonorCount',
-      'stsmTestedDonorCount',
-      'sgvTestedDonorCount',
-      'methArrayTestedDonorCount',
-      'methSeqTestedDonorCount',
-      'expArrayTestedDonorCount',
-      'expSeqTestedDonorCount',
-      'pexpTestedDonorCount',
-      'mirnaSeqTestedDonorCount',
-      'jcnTestedDonorCount'];
+      'stsmTestedDonorCount'];
 
     var fieldMapping = {
       totalLiveDonorCount: {state: 'live'},
       totalDonorCount: {},
       ssmTestedDonorCount: {datatype: 'ssm'},
       cnsmTestedDonorCount: {datatype: 'cnsm'},
-      stsmTestedDonorCount: {datatype: 'stsm'},
-      sgvTestedDonorCount: {datatype: 'sgv'},
-      methArrayTestedDonorCount: {datatype: 'meth_array'},
-      methSeqTestedDonorCount: {datatype: 'meth_seq'},
-      expArrayTestedDonorCount: {datatype: 'exp_array'},
-      expSeqTestedDonorCount: {datatype: 'exp_seq'},
-      pexpTestedDonorCount: {datatype: 'pexp'},
-      mirnaSeqTestedDonorCount: {datatype: 'mirna_seq'},
-      jcnTestedDonorCount: {datatype: 'jcn'}
+      stsmTestedDonorCount: {datatype: 'stsm'}
     };
 
     function buildFilter (fieldKey, projectIds) {
