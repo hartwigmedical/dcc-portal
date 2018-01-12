@@ -300,14 +300,6 @@
                 <th rowspan="2" class="text-center">
                     <abbr data-icgc-tooltip="{{'Number of SSM in the Gene' | translate}}" data-tooltip-placement="left"><translate># Mutations</translate></abbr>
                 </th>
-                <th rowspan="2">
-                    <abbr data-icgc-tooltip="{{ 'Cohort comparison for filtered donors with versus without mutated gene' | translate }}" 
-                        data-tooltip-placement="left"
-                        style="display:block;">
-                        <i class="icon-chart-bar">
-                        </i>
-                    </abbr>
-                </th>
             </tr>
             <tr>
                 <th class="text-center"
@@ -376,10 +368,6 @@
                        href='/search/m?filters={{gene.advQuery}}'>
                         {{ProjectGeneCtrl.mutationCounts[ProjectCtrl.project.id][gene.id] | number}}
                     </a>
-                </td>
-                <td>
-                    <i class="icon-chart-bar phenotype-analysis"
-                        data-ng-click="ProjectCtrl.launchSurvivalAnalysis('gene', gene.id, gene.symbol)"></i>
                 </td>
             </tr>
             </tbody>
@@ -467,14 +455,6 @@
                     <abbr data-icgc-tooltip="{{'Consequences caused by the mutation, annotated using SnpEff with Sequence Ontology terms. High, Low impact AA change is in RED or GREEN respectively.' | translate}}"><translate>Consequences</translate></abbr>
                 </th>
                 <th colspan="2" class="text-center"><translate># Donors affected</translate></th>
-                <th rowspan="2">
-                    <abbr data-icgc-tooltip="{{ 'Cohort comparison for filtered donors with versus without mutation' | translate }}" 
-                        data-tooltip-placement="left"
-                        style="display:block;padding-left:5px;">
-                        <i class="icon-chart-bar">
-                        </i>
-                    </abbr>
-                </th>
             </tr>
             <tr>
                 <th class="text-center"
@@ -537,10 +517,6 @@
                             </span>
                         </li>
                     </ul>
-                </td>
-                <td>
-                    <i class="icon-chart-bar phenotype-analysis" style="padding-left:5px;"
-                        data-ng-click="ProjectCtrl.launchSurvivalAnalysis('mutation', mutation.id, mutation.id)"></i>
                 </td>
             </tr>
             </tbody>
@@ -623,9 +599,6 @@
                 <th rowspan="2"><translate>Gender</translate></th>
                 <th rowspan="2" class="text-center"><abbr data-icgc-tooltip="{{'Age at Diagnosis' | translate}}"><translate>Age</translate></abbr></th>
                 <th rowspan="2"><abbr data-icgc-tooltip="{{'Tumour Stage at Diagnosis' | translate}}"><translate>Stage</translate></abbr></th>
-                <th rowspan="2" class="text-center">
-                    <abbr data-icgc-tooltip="{{'Survival Time in days' | translate}}"><translate has-markup>Survival<br>(days)</translate></abbr>
-                </th>
                 <th rowspan="2"><abbr data-icgc-tooltip="{{'Experimental analysis performed' | translate}}"><translate>Analysis</translate></abbr></th>
                 <th colspan="3" class="text-center"><translate>Available Data Types:</translate></th>
                 <th rowspan="2" data-icgc-tooltip="{{'Number of SSM' | translate}}"><abbr><translate># Mutations</translate></abbr></th>
@@ -653,7 +626,6 @@
                 <td>{{donor.gender}}</td>
                 <td class="text-right">{{donor.ageAtDiagnosis | numberPT}}</td>
                 <td>{{donor.tumourStageAtDiagnosis}}</td>
-                <td class="text-right">{{donor.survivalTime | numberPT}}</td>
                 <td>{{donor.analysisTypes.join(', ')}}</td>
                 <td class="text-center"><span data-exists="donor.ssmCount"></span></td>
                 <td class="text-center"><span data-exists="donor.cnsmExists"></span></td>
@@ -686,7 +658,6 @@
                 <th><translate>Gender</translate></th>
                 <th><translate>Age at Diagnosis</translate></th>
                 <th><translate>Tumor Stage at Diagnosis</translate></th>
-                <th><translate>Survival Time (days)</translate></th>
                 <th><translate>Experimental Analysis</translate></th>
                 <th>SSM</th>
                 <th>CNSM</th>
@@ -702,7 +673,6 @@
                 <td>{{donor.gender}}</td>
                 <td>{{donor.ageAtDiagnosis}}</td>
                 <td>{{donor.tumourStageAtDiagnosis}}</td>
-                <td>{{donor.survivalTime}}</td>
                 <td>{{donor.analysisTypes.join(', ')}}</td>
                 <td>{{donor.ssmCount? 'True': 'False'}}</td>
                 <td>{{donor.cnsmExists? 'True':'False'}}</td>
