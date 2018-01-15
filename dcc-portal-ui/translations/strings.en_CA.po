@@ -6317,7 +6317,7 @@ msgid "e.g. MU123"
 msgstr ""
 
 #: app/scripts/projects/views/projects.html:9
-msgid "e.g. PACA-CA, Brain, TCGA"
+msgid "e.g. Brain, Lung, Kidney"
 msgstr ""
 
 #: app/scripts/advanced/views/advanced.facets.genes.html:18
