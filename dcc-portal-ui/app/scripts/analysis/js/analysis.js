@@ -241,7 +241,7 @@ require('./setSelection');
         name: gettextCatalog.getString('OncoGrid'),
         description: gettextCatalog.getString('Visualize genetic alterations affecting a set of donors.'),
         demoDescription: gettextCatalog.getString('Demo showing top 75 donors and genes for PCAWG liver projects.'),
-        datasetSelectionInstructions: gettextCatalog.getString('<em>Select 1 Gene set <small>(100 genes maximum)</small> and 1 Donor set <small>(3000 donors maximum)</small>.</em>'),
+        datasetSelectionInstructions: gettextCatalog.getString('<em>Select 1 Gene set <small>(200 genes maximum)</small> and 1 Donor set <small>(5000 donors maximum)</small>.</em>'),
       }
     };
 
