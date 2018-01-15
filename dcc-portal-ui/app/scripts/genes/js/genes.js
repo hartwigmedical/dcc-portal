@@ -172,6 +172,7 @@
         var mutationPromise, donorPromise;
         if ( !projects.hits || projects.hits.length === 0) {
           _ctrl.gene.projects = [];
+          _ctrl.gene.projects.hits = [];
           return;
         }
 
