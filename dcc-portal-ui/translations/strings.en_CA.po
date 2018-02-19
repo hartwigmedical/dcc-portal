@@ -259,7 +259,7 @@ msgid ""
 msgstr ""
 
 #: app/scripts/common/views/header.html:5
-msgid "<span id=\"icgc\">ICGC</span> Data Portal"
+msgid "<span id=\"icgc\">HMF</span> Data Portal"
 msgstr ""
 
 #: app/scripts/repository/views/repository.external.file.html:262

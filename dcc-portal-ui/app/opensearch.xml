@@ -1,5 +1,5 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-<ShortName>ICGC Data Portal</ShortName>
+<ShortName>HMF Data Portal</ShortName>
 <Description>
     The ICGC Data Portal provides tools for visualizing, querying and downloading the data released quarterly by the consortium's member projects.
 </Description>
