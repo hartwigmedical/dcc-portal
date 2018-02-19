@@ -2327,7 +2327,7 @@ msgid "ICCG Compute Cloud Partners"
 msgstr ""
 
 #: app/scripts/common/views/footer.html:51
-msgid "ICGC Data Portal"
+msgid "HMF Data Portal"
 msgstr ""
 
 #: app/scripts/beacon/views/beacon.html:3
@@ -4923,7 +4923,7 @@ msgid "The ICGC DCC offers a standalone virtual machine that allows you to local
 msgstr ""
 
 #: app/scripts/static/views/info.html:74
-msgid "The ICGC Data Portal uses gene models produced by Ensembl (<a href=\"http://www.ensembl.org\">http://www.ensembl.org</a>)."
+msgid "The HMF Data Portal uses gene models produced by Ensembl (<a href=\"http://www.ensembl.org\">http://www.ensembl.org</a>)."
 msgstr ""
 
 #: app/scripts/repositories/views/home.html:14

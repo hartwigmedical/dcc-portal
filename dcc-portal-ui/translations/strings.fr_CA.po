@@ -2481,8 +2481,8 @@ msgid "ICCG Compute Cloud Partners"
 msgstr ""
 
 #: app/scripts/common/views/footer.html:51
-msgid "ICGC Data Portal"
-msgstr "Portail de données ICGC"
+msgid "HMF Data Portal"
+msgstr "Portail de données HMF"
 
 #: app/scripts/beacon/views/beacon.html:3
 #: app/scripts/common/views/footer.html:11
@@ -5317,7 +5317,7 @@ msgstr ""
 
 #: app/scripts/static/views/info.html:74
 msgid ""
-"The ICGC Data Portal uses gene models produced by Ensembl (<a href=\"http://"
+"The HMF Data Portal uses gene models produced by Ensembl (<a href=\"http://"
 "www.ensembl.org\">http://www.ensembl.org</a>)."
 msgstr ""
 
