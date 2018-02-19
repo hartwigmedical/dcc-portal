@@ -208,21 +208,21 @@
         <tr>
             <th><translate>Copy Number Somatic Mutations (CNSM)</translate></th>
             <td>
-                <a data-ng-if="ProjectCtrl.project.cnsmTestedDonorCount > 0"
-                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]},\"availableDataTypes\":{\"is\":[\"cnsm\"]}}}"})'>
-                    {{ProjectCtrl.project.cnsmTestedDonorCount | number}} donors
+                <a data-ng-if="ProjectCtrl.project.ssmTestedDonorCount > 0"
+                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]}}}"})'>
+                    {{ProjectCtrl.project.ssmTestedDonorCount | number}} donors
                 </a>
-                <span data-ng-if="ProjectCtrl.project.cnsmTestedDonorCount === 0">--</span>
+                <span data-ng-if="ProjectCtrl.project.ssmTestedDonorCount === 0">--</span>
             </td>
         </tr>
         <tr>
             <th><translate>Structural Somatic Mutations (StSM)</translate></th>
             <td>
-                <a data-ng-if="ProjectCtrl.project.stsmTestedDonorCount > 0"
-                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]},\"availableDataTypes\":{\"is\":[\"stsm\"]}}}"})'>
-                    {{ProjectCtrl.project.stsmTestedDonorCount | number}} donors
+                <a data-ng-if="ProjectCtrl.project.ssmTestedDonorCount > 0"
+                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]}}}"})'>
+                    {{ProjectCtrl.project.ssmTestedDonorCount | number}} donors
                 </a>
-                <span data-ng-if="ProjectCtrl.project.stsmTestedDonorCount === 0">--</span>
+                <span data-ng-if="ProjectCtrl.project.ssmTestedDonorCount === 0">--</span>
             </td>
         </tr>
     </table>
