@@ -192,7 +192,7 @@
             y0: bar.total,
             y1: bar.total + p.count,
             link: '/genes/' + gene.id,
-            label: p.name,
+            label: p.primarySite,
             key: gene.symbol, // Parent key
             colourKey: p.primarySite
           });
