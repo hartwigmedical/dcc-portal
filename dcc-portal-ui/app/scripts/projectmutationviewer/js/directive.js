@@ -108,9 +108,8 @@
             });
 
             if (count % 2 === 0) {
-              medium = 0.5 * (points[count/2] + points[(count/2)+1]);
+              medium = 0.5 * (points[count/2] + points[(count/2)-1]);
             } else {
-
               if (count === 1) {
                 medium = points[0];
               } else {
