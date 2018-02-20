@@ -154,9 +154,16 @@
     };
 
     function buildFilter (fieldKey, projectIds) {
-      var filter = _.mapValues (_.clone (_.get (fieldMapping, fieldKey, {})), function (v) {
-        return [v];
-      });
+      var filter;
+      if(fieldKey === 'cnsmTestedDonorCount' || fieldKey === 'stsmTestedDonorCount'){
+        filter = _.mapValues (_.clone (_.get (fieldMapping, 'totalDonorCount', {})), function (v) {
+          return [v];
+        });
+      } else {
+        filter = _.mapValues (_.clone (_.get (fieldMapping, fieldKey, {})), function (v) {
+          return [v];
+        });
+      }
 
       if (_.isArray (projectIds) && (! _.isEmpty (projectIds))) {
         _.assign (filter, {ids: projectIds});
@@ -264,7 +271,13 @@
     function success (data) {
       if (data.hasOwnProperty('hits')) {
         var totalDonors = 0, ssmTotalDonors = 0;
-
+        var updatedProjectData = _.map(data.hits, function(projectData) {
+          projectData['cnsmTestedDonorCount'] = projectData['ssmTestedDonorCount']
+          projectData['stsmTestedDonorCount'] = projectData['ssmTestedDonorCount']
+          projectData['availableDataTypes'] = ['ssm', 'cnsm', 'stsm']
+          return projectData;
+        });
+        data.hits = updatedProjectData
         _ctrl.projectIds = _.map (data.hits, 'id');
 
         data.hits.forEach(function (p) {
@@ -274,10 +287,17 @@
 
         var totalRowProjectIds = hasQueryFilter() ? _ctrl.projectIds : undefined;
         _ctrl.totals = _.map (_ctrl.fieldKeys, function (fieldKey) {
-          return {
-            total: _.sumBy (data.hits, fieldKey),
-            sref: $scope.toAdvancedSearch (fieldKey, totalRowProjectIds)
-          };
+          if(fieldKey === 'cnsmTestedDonorCount' || fieldKey === 'stsmTestedDonorCount'){
+            return {
+              total: _.sumBy (data.hits, fieldKey),
+              sref: $scope.toAdvancedSearch ('totalDonorCount', totalRowProjectIds)
+            };
+          } else {
+            return {
+              total: _.sumBy (data.hits, fieldKey),
+              sref: $scope.toAdvancedSearch (fieldKey, totalRowProjectIds)
+            };
+          }
         });
 
         _ctrl.totalDonors = totalDonors;
