@@ -1508,7 +1508,7 @@ msgid "Donors included in Analysis"
 msgstr ""
 
 #: app/scripts/releases/views/home.html:58
-msgid "Donors with molecular data in DCC"
+msgid "Donors with molecular data"
 msgstr ""
 
 #: app/scripts/downloader/views/request.html:70
@@ -3298,7 +3298,7 @@ msgid "Number of donors in <a href=\"/pcawg\">PCAWG</a>"
 msgstr ""
 
 #: app/scripts/projects/views/project.html:116
-msgid "Number of donors with molecular data in DCC"
+msgid "Number of donors with molecular data"
 msgstr ""
 
 #: app/scripts/genes/views/gene.html:317
@@ -5215,7 +5215,7 @@ msgid "Total Donors"
 msgstr ""
 
 #: app/scripts/projects/views/projects.details.html:44
-msgid "Total Number of Donors with Molecular Data in DCC"
+msgid "Total Number of Donors with Molecular Data"
 msgstr ""
 
 #: app/scripts/projects/views/projects.details.html:50

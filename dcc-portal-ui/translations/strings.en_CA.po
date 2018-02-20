@@ -3464,7 +3464,7 @@ msgid "Number of donors in <a href=\"/pcawg\">PCAWG</a>"
 msgstr ""
 
 #: app/scripts/projects/views/project.html:116
-msgid "Number of donors with molecular data in DCC"
+msgid "Number of donors with molecular data"
 msgstr ""
 
 #: app/scripts/genes/views/gene.html:305
@@ -5631,7 +5631,7 @@ msgid "Total Donors"
 msgstr ""
 
 #: app/scripts/projects/views/projects.details.html:44
-msgid "Total Number of Donors with Molecular Data in DCC"
+msgid "Total Number of Donors with Molecular Data"
 msgstr ""
 
 #: app/scripts/projects/views/projects.details.html:50
