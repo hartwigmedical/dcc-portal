@@ -144,7 +144,7 @@
           };
 
           var donorTracks = [
-            { 'name': gettextCatalog.getString('Age at Diagnosis'), 
+            { 'name': gettextCatalog.getString('Age at Enrollment'),
               'fieldName': 'age', 'type': 'int', 'sort': sortInt, 'group': 'Clinical'},
             { 'name': gettextCatalog.getString('Vital Status'), 
               'fieldName': 'vitalStatus', 'type': 'vital', 'sort': sortByString, 'group': 'Clinical' },

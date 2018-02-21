@@ -70,7 +70,7 @@
       'vitalStatus': gettextCatalog.getString('Vital Status'),
       'diseaseStatusLastFollowup': gettextCatalog.getString('Disease Status'),
       'relapseType': gettextCatalog.getString('Relapse Type'),
-      'ageAtDiagnosisGroup': gettextCatalog.getString('Age at Diagnosis'),
+      'ageAtDiagnosisGroup': gettextCatalog.getString('Age at Enrollment'),
       'availableDataTypes': gettextCatalog.getString('Available Data Type'),
       'analysisTypes': gettextCatalog.getString('Donor Analysis Type'),
       'list': gettextCatalog.getString('Gene sets'),

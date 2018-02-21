@@ -233,7 +233,7 @@ require('./setSelection');
       phenotype: {
         name: gettextCatalog.getString('Cohort Comparison'),
         description: gettextCatalog.getString('Display the survival analysis of your donor sets and compare ' +
-        ' characteristics such as gender, vital status and age at diagnosis between your donor sets.'),
+        ' characteristics such as gender, vital status and age at enrollment between your donor sets.'),
         demoDescription: gettextCatalog.getString('Demo showing donors with pancreatic cancer with and without mutations in the gene KRAS.'),
         datasetSelectionInstructions: gettextCatalog.getString('Select 2 donor sets.'),
       },

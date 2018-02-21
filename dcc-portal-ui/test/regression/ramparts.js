@@ -202,7 +202,7 @@ function validateFacets(route, activeTerms, inactiveTerms) {
         //  - ID facets, these haave no counts per se. 
         //  - One-to-many counts, these counts are typically higher than the page results
         // whiteList are the facets that have one-to-one relations
-        var whiteList = ['Type', 'Curated Gene Set', 'Primary Site', 'Project', 'Gender', 'Tumour Stage', 'Vital Status', 'Disease Status', 'Relapse Type', 'Age at Diagnosis'];
+        var whiteList = ['Type', 'Curated Gene Set', 'Primary Site', 'Project', 'Gender', 'Tumour Stage', 'Vital Status', 'Disease Status', 'Relapse Type', 'Age at Enrollment'];
 
         if (result.count) {
           var activeGroups = _.groupBy(activeTerms, function(d) { return d.facet; });

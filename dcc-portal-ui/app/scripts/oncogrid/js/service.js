@@ -212,7 +212,7 @@
 
     _srv.clinicalLegend = function(maxSurvival) {
       var value =  '<b>' + gettextCatalog.getString('Clinical Data') + ':</b> <br>' +
-      '<b>' + gettextCatalog.getString('Age at Diagnosis (years)') + ': </b> ' + 
+      '<b>' + gettextCatalog.getString('Age at Enrollment (years)') + ': </b> ' +
         '0 <div class="onco-track-legend onco-age-legend" style="opacity:0.05"></div>' +
         '<div class="onco-track-legend onco-age-legend" style="opacity:0.4"></div>' + 
         '<div class="onco-track-legend onco-age-legend" style="opacity:0.7"></div>' + 

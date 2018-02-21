@@ -387,15 +387,15 @@ msgstr ""
 #: app/scripts/oncogrid/js/directive.js:146
 #: app/scripts/projects/views/project.html:648
 #: app/scripts/projects/views/project.html:720
-msgid "Age at Diagnosis"
+msgid "Age at Enrollment"
 msgstr ""
 
 #: app/scripts/oncogrid/js/service.js:215
-msgid "Age at Diagnosis (years)"
+msgid "Age at Enrollment (years)"
 msgstr ""
 
 #: app/scripts/phenotype/views/phenotype.result.html:363
-msgid "Age at diagnosis comparison"
+msgid "Age at enrollment comparison"
 msgstr ""
 
 #: app/scripts/donors/views/donor.html:172
@@ -1307,7 +1307,7 @@ msgstr ""
 
 #: app/scripts/analysis/js/analysis.js:225
 #: app/scripts/analysis/js/analysis.js:239
-msgid "Display the survival analysis of your donor sets and compare some characteristics such as gender, vital status and age at diagnosis between your donor sets."
+msgid "Display the survival analysis of your donor sets and compare some characteristics such as gender, vital status and age at enrollment between your donor sets."
 msgstr ""
 
 #: app/scripts/common/js/consequence.js:44
