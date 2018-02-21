@@ -104,18 +104,6 @@
                 <td>{{ DonorCtrl.donor.gender }}</td>
             </tr>
             <tr>
-                <th><translate>Tumour Type</translate></th>
-                <td>{{ DonorCtrl.donor.tumourType }}</td>
-            </tr>
-            <tr>
-                <th><translate>Tumour Subtype</translate></th>
-                <td>{{ DonorCtrl.donor.tumourSubtype }}</td>
-            </tr>
-            <tr>
-                <th><translate>Diagnosis ICD-10 code</translate></th>
-                <td>{{ DonorCtrl.donor.diagnosisIcd10 }}</td>
-            </tr>
-            <tr>
                 <th><translate>Total number of mutations</translate></th>
                 <td><a data-ng-if="DonorCtrl.donor.ssmCount > 0"
                        href='/search/m?filters={"donor":{"id":{"is":["{{DonorCtrl.donor.id}}"]}}}'>
