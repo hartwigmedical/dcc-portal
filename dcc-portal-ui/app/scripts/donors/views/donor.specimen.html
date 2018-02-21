@@ -178,14 +178,15 @@
                         </ul>
                         <span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">--</span>
                     </td>
-                    <td>
-                        <ul>
-                            <li data-ng-repeat="item in sample.uiUniqueRawSequenceData">
-                                <span data-ng-bind-html="item.repository | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples"></span>
-                            </li>
-                        </ul>
-                        <span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">--</span>
-                    </td>
+                    <!--<td>-->
+                        <!--<ul>-->
+                            <!--<li data-ng-repeat="item in sample.uiUniqueRawSequenceData">-->
+                                <!--<span data-ng-bind-html="item.repository | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples"></span>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<span data-ng-if="sample.uiAvailableRawSequenceData.length == 0">--</span>-->
+                    <!--</td>-->
+                    <td>HMF</td>
                     <!--<td>-->
                         <!--<ul>-->
                             <!--<li data-ng-repeat="item in sample.uiUniqueRawSequenceData">-->
@@ -225,7 +226,7 @@
                     <td>{{sample.analyzedId}}</td>
                     <td>{{sample.study}}</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'libraryStrategy').join(', ') }}</td>
-                    <td>{{ (sample.availableRawSequenceData | unique | _:"map":'repository').join(', ') }}</td>
+                    <td>HMF</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'id').join(', ') }}</td>
                 </tr>
                 </tbody>
