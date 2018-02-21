@@ -46,23 +46,14 @@
         <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='primaryCountries'" class="icon-sort"></i>
         <i data-ng-if="predicate==='primaryCountries'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
     </th>
-    <th colspan="2" class="text-center"><translate>Donors</translate></th>
+    <th rowspan="2" style="cursor: pointer" data-ng-click="predicate='totalDonorCount'; reverse=!reverse">
+        <abbr data-icgc-tooltip="{{'Total Number of Donors' | translate}}"><translate>Donors</translate></abbr>
+        <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='totalDonorCount'" class="icon-sort"></i>
+        <i data-ng-if="predicate==='totalDonorCount'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
+    </th>
     <th colspan="3" class="text-center"><translate>Available Data Types:</translate></th>
 </tr>
 <tr>
-    <th rowspan="2" style="cursor: pointer" data-ng-click="predicate='totalLiveDonorCount'; reverse=!reverse">
-        <abbr data-icgc-tooltip="{{'Total Number of Donors with Molecular Data' | translate}}"><translate>DCC</translate></abbr>
-        <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='totalLiveDonorCount'"
-           class="icon-sort"></i>
-        <i data-ng-if="predicate==='totalLiveDonorCount'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
-    </th>
-    <th rowspan="2" style="cursor: pointer" data-ng-click="predicate='totalDonorCount'; reverse=!reverse">
-        <abbr data-icgc-tooltip="{{'Total Number of all Donors' | translate}}"><translate>All</translate></abbr>
-        <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='totalDonorCount'"
-           class="icon-sort"></i>
-        <i data-ng-if="predicate==='totalDonorCount'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
-    </th>
-
     <th style="cursor: pointer" data-ng-click="predicate='ssmTestedDonorCount'; reverse=!reverse">
         <abbr data-icgc-tooltip="Number of Donors with {{ 'ssm' | datatype }}"
               class="tiny-header">SSM</abbr>

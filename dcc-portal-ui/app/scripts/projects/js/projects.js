@@ -139,14 +139,12 @@
     }
 
     _ctrl.fieldKeys = [
-      'totalLiveDonorCount',
       'totalDonorCount',
       'ssmTestedDonorCount',
       'cnsmTestedDonorCount',
       'stsmTestedDonorCount'];
 
     var fieldMapping = {
-      totalLiveDonorCount: {state: 'live'},
       totalDonorCount: {},
       ssmTestedDonorCount: {datatype: 'ssm'},
       cnsmTestedDonorCount: {datatype: 'cnsm'},

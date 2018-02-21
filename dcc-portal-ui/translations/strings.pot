@@ -5219,7 +5219,7 @@ msgid "Total Number of Donors with Molecular Data"
 msgstr ""
 
 #: app/scripts/projects/views/projects.details.html:50
-msgid "Total Number of all Donors"
+msgid "Total Number of Donors"
 msgstr ""
 
 #: app/scripts/advanced/views/advanced.observation.popup.html:28
