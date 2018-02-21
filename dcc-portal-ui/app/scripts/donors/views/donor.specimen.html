@@ -162,10 +162,7 @@
                         <span data-ng-bind-html="sample.uiAnalyzedId | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples"></span>
                     </td>
                     <td>
-                        <pcawg-badge data-ng-if="DonorSpecimenCtrl.PCAWG.isPCAWGStudy(sample.uiStudy)"></pcawg-badge>
-                        <span data-ng-if="!DonorSpecimenCtrl.PCAWG.isPCAWGStudy(sample.uiStudy)"
-                            data-ng-bind-html="sample.uiStudy ? (sample.uiStudy  | highlight: DonorSpecimenCtrl.tableFilter.specimenSamples) : '--'">
-                        </span>
+                        <a href="http://www.cpct.nl/">CPCT</a>
                     </td>
                     </td>
                     <td>
@@ -224,7 +221,7 @@
                 <tr data-ng-repeat="sample in DonorSpecimenCtrl.specimen.samples">
                     <td>{{sample.id}}</td>
                     <td>{{sample.analyzedId}}</td>
-                    <td>{{sample.study}}</td>
+                    <td>CPCT</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'libraryStrategy').join(', ') }}</td>
                     <td>HMF</td>
                     <td>{{ (sample.availableRawSequenceData | unique | _:"map":'id').join(', ') }}</td>
