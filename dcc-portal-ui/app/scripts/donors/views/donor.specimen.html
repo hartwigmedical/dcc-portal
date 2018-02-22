@@ -230,4 +230,14 @@
             </table>
         </div>
     </div>
+    <div id="circos">
+        <h3 data-ng-if="DonorSpecimenCtrl.specimen.circos == null">No Circos Plot Found.</h3>
+
+        <div data-ng-if="DonorSpecimenCtrl.specimen.circos != null">
+            <h3>Circos Plot</h3>
+            <div>
+                <img style="max-width: 90%; margin: auto;" ng-src="{{DonorSpecimenCtrl.specimen.circos}}">
+            </div>
+        </div>
+    </div>
 </div>

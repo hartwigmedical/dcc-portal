@@ -255,6 +255,10 @@
     _ctrl.setActive = function (id) {
       Donors.one(donorId).get({include: 'specimen'}).then(function (donor) {
         if (donor.hasOwnProperty('specimen')) {
+          donor.specimen = donor.specimen.map(function (specimen){
+             specimen.circos = 'styles/images/circos_example.png';
+             return specimen;
+          })
           _ctrl.active = id || donor.specimen[0].id;
           _ctrl.specimen = _.find(donor.specimen, function (s) {
             return s.id === _ctrl.active;
