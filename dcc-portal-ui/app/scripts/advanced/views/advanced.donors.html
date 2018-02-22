@@ -156,10 +156,10 @@
                     <span data-exists="donor.ssmCount"></span>
                 </td>
                 <td style="text-align: center">
-                    <span data-exists="donor.cnsmExists"></span>
+                    <span data-exists="true"></span>
                 </td>
                 <td style="text-align: center">
-                    <span data-exists="donor.stsmExists"></span>
+                    <span data-exists="true"></span>
                 </td>
                 <td class="text-right">
                     <span data-ng-if="!AdvancedCtrl.Donor.mutationCounts"><i class="icon-spinner icon-spin"></i></span>
@@ -205,8 +205,8 @@
                 <td>{{ donor.ageAtDiagnosis }}</td>
                 <td>{{ donor.tumourStageAtDiagnosis }}</td>
                 <td>{{ donor.ssmCount? 'True': 'False' }} </td>
-                <td>{{ donor.cnsmExists? 'True': 'False'}}</td>
-                <td>{{ donor.stsmExists? 'True': 'False'}}</td>
+                <td>True</td>
+                <td>True</td>
                 <td>{{ AdvancedCtrl.Donor.mutationCounts[donor.id] }}</td>
                 <td>{{ donor.ssmAffectedGenes | numberPT }}</td>
             </tr>
