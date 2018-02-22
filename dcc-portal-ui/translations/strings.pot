@@ -679,7 +679,7 @@ msgid "Both Pairs Mapped"
 msgstr ""
 
 #: app/scripts/releases/views/home.html:102
-msgid "Brain cancer donors with frameshift mutations and having methylation data available"
+msgid "Brain cancer donors with frameshift mutations"
 msgstr ""
 
 #: app/scripts/donors/views/donor.html:295
