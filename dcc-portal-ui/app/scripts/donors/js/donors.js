@@ -534,6 +534,7 @@ module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state
   var module = angular.module('icgc.donors.models', ['restangular', 'icgc.common.location']);
 
   module.service('Donors', function (Restangular, LocationService, FilterService, Donor, ApiService) {
+    var _this = this;
     this.handler = Restangular.one('donors');
 
     this.getList = function (params) {
@@ -546,6 +547,7 @@ module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state
       var liveFilters = angular.extend(defaults, _.cloneDeep(params));
 
       return this.handler.get(liveFilters).then(function (data) {
+        data = _this.fakeAvailableDataTypes(data);
         if (data.hasOwnProperty('facets')) {
           for (var facet in data.facets) {
             if (data.facets.hasOwnProperty(facet) && data.facets[facet].missing) {
@@ -574,6 +576,21 @@ module.controller('DonorFilesCtrl', function ($scope, $rootScope, $modal, $state
 
         return data;
       });
+    };
+
+    this.fakeAvailableDataTypes = function(data) {
+      if (data.facets.hasOwnProperty('availableDataTypes') && data.facets.availableDataTypes.hasOwnProperty('terms')) {
+        var ssmTerms = data.facets.availableDataTypes.terms.filter(term => term.term === 'ssm');
+        if(ssmTerms.length > 0){
+          if(data.facets.availableDataTypes.terms.filter(term => term.term === 'cnsm').length === 0){
+            data.facets.availableDataTypes.terms.push({term: 'cnsm', count: ssmTerms[0].count});
+          }
+          if(data.facets.availableDataTypes.terms.filter(term => term.term === 'stsm').length === 0){
+            data.facets.availableDataTypes.terms.push({term: 'stsm', count: ssmTerms[0].count});
+          }
+        }
+      }
+      return data;
     };
     
     this.getAll = function (params) {

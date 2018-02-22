@@ -100,7 +100,7 @@ angular.module('icgc.advanced.controllers', [
       _controller.geneSets = _.cloneDeep(SetService.getAllGeneSets());
       _controller.mutationSets = _.cloneDeep(SetService.getAllMutationSets());
 
-      _controller.createChartConfig = (entityType, entityFacet, entityFormatter) => ({
+      _controller.createChartConfig = (entityType, entityFacet, entityFormatter, onClick) => ({
         chart: {
           type: 'column',
           marginTop: 20,
@@ -132,40 +132,40 @@ angular.module('icgc.advanced.controllers', [
             maxPointWidth: 20,
             borderRadiusTopLeft: 3,
             borderRadiusTopRight: 3,
-            cursor: 'pointer',
+            cursor: onClick === null ? undefined : 'pointer',
             stickyTracking: false,
             colorByPoint: true,
             point: {
               events: {
-                click: function () {
-                  if (angular.isArray(this.term)) {
-                    Facets.setTerms({
-                      type: entityType,
-                      facet: entityFacet,
-                      terms: this.term
-                    });
-                  } else {
-                    Facets.toggleTerm({
-                      type: entityType,
-                      facet: entityFacet,
-                      term: this.term
-                    });
-                  }
-                  $scope.$apply();
-                }
+                click: onClick
               }
             }
           }
         }
       });
 
-      _controller.donorDataTypeChartConfig = _controller.createChartConfig('donor', 'availableDataTypes', function () { return this.value > 1000 ? `${this.value / 1000}K` : this.value;});
-      _controller.donorAnalysisTypeChartConfig = _controller.createChartConfig('donor', 'analysisTypes', function () { return this.value > 1000 ? `${this.value / 1000}K` : this.value;});
+      _controller.donorDataTypeChartConfig = _controller.createChartConfig('donor', 'availableDataTypes', function () { return this.value > 1000 ? `${this.value / 1000}K` : this.value;}, null);
+      _controller.donorAnalysisTypeChartConfig = _controller.createChartConfig('donor', 'analysisTypes', function () { return this.value > 1000 ? `${this.value / 1000}K` : this.value;}, null);
       _controller.mutationConsequenceTypeChartConfig = _controller.createChartConfig('mutation', 'consequenceType', function () { 
         if(this.value > 1000000){ return `${this.value / 1000000}M`}
         else if(this.value > 1000){ return `${this.value / 1000}K`}
         else{ return this.value;}
-      });
+      }, function () {
+         if (angular.isArray(this.term)) {
+           Facets.setTerms({
+             type: 'mutation',
+             facet: 'consequenceType',
+             terms: this.term
+           });
+         } else {
+           Facets.toggleTerm({
+             type: 'mutation',
+             facet: 'consequenceType',
+             term: this.term
+           });
+         }
+         $scope.$apply();
+       });
 
       // to check if a set was previously selected and if its still in effect
       const updateSetSelection = (entity, entitySets) => {
