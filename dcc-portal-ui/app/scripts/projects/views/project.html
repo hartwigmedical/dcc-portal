@@ -596,8 +596,8 @@
                 <td>{{donor.tumourStageAtDiagnosis}}</td>
                 <td>{{donor.analysisTypes.join(', ')}}</td>
                 <td class="text-center"><span data-exists="donor.ssmCount"></span></td>
-                <td class="text-center"><span data-exists="donor.cnsmExists"></span></td>
-                <td class="text-center"><span data-exists="donor.stsmExists"></span></td>
+                <td class="text-center"><span data-exists="true"></span></td>
+                <td class="text-center"><span data-exists="true"></span></td>
                 <td class="text-right">
                     <i data-ng-if="ProjectDonorsCtrl.mutationCounts===null"
                        class="icon-spinner icon-spin"></i>
@@ -643,8 +643,8 @@
                 <td>{{donor.tumourStageAtDiagnosis}}</td>
                 <td>{{donor.analysisTypes.join(', ')}}</td>
                 <td>{{donor.ssmCount? 'True': 'False'}}</td>
-                <td>{{donor.cnsmExists? 'True':'False'}}</td>
-                <td>{{donor.stsmExists? 'True':'False'}}</td>
+                <td>True</td>
+                <td>True</td>
                 <td>{{ProjectDonorsCtrl.mutationCounts[donor.id]}}</td>
                 <td>{{donor.ssmAffectedGenes}}</td>
             </tr>
