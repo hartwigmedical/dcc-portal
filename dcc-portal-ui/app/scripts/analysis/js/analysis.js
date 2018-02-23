@@ -218,7 +218,7 @@ require('./setSelection');
         name: gettextCatalog.getString('Set Operations'),
         description: gettextCatalog.getString('Display Venn diagram and find intersection or union,' + 
           ' etc. of your sets of the same type.'),
-        demoDescription: gettextCatalog.getString('Demo showing high impact mutations in brain cancers across GBM-US, LGG-US, and PCBA-DE.'),
+        demoDescription: gettextCatalog.getString('Demo showing high impact mutations across HMF-Brain, HMF-Breast, and HMF-Liver.'),
         datasetSelectionInstructions: gettextCatalog.getString('Select 2 or 3 sets of the same type.'),
       },
       get union () {

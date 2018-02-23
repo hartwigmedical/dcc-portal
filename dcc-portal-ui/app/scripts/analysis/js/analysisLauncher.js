@@ -402,15 +402,13 @@
       });
 
     };
-
     _this.demoSetOperation = function() {
       global.track('analysis', { action: 'demo', label: 'set' });
       var p1, p2, p3, type = 'mutation';
       p1 = {
         filters: {
           donor:{
-            primarySite: {is: ['Brain']},
-            projectId: {is: ['GBM-US']}
+            projectId: {is: ['HMF-Brain']}
           },
           mutation: {
             functionalImpact: {is: ['High']}
@@ -418,13 +416,12 @@
         },
         type: type,
         isTransient: true,
-        name: 'GBM-US High Impact Mutation'
+        name: 'HMF-Brain High Impact Mutation'
       };
       p2 = {
         filters: {
           donor:{
-            primarySite: {is: ['Brain']},
-            projectId: {is: ['LGG-US']}
+            projectId: {is: ['HMF-Breast']}
           },
           mutation: {
             functionalImpact: {is: ['High']}
@@ -432,13 +429,12 @@
         },
         type: type,
         isTransient: true,
-        name: 'LGG-US High Impact Mutation'
+        name: 'HMF-Breast High Impact Mutation'
       };
       p3 = {
         filters: {
           donor:{
-            primarySite: {is: ['Brain']},
-            projectId: {is: ['PBCA-DE']}
+            projectId: {is: ['HMF-Liver']}
           },
           mutation: {
             functionalImpact: {is: ['High']}
@@ -446,7 +442,7 @@
         },
         type: type,
         isTransient: true,
-        name: 'PBCA-DE High Impact Mutation'
+        name: 'HMF-Liver High Impact Mutation'
       };
 
       var demoSetIds = [];

@@ -992,8 +992,7 @@ msgstr ""
 
 #: app/scripts/analysis/js/analysis.js:211
 msgid ""
-"Compare high impact mutations in brain cancers across GBM-US, LGG-US, and "
-"PCBA-DE."
+"Compare high impact mutations across HMF-Brain, HMF-Breast, and HMF-Liver."
 msgstr ""
 
 #: app/scripts/common/js/services.js:223
