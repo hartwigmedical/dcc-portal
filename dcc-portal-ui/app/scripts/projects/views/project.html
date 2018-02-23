@@ -191,7 +191,7 @@
             <th><translate>Simple Somatic Mutations (SSM)</translate></th>
             <td>
                 <a data-ng-if="ProjectCtrl.project.ssmTestedDonorCount > 0"
-                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]},\"availableDataTypes\":{\"is\":[\"ssm\"]}}}"})'>
+                   data-ui-sref='advanced({filters:"{\"donor\":{\"projectId\":{\"is\":[\"{{ProjectCtrl.project.id}}\"]}}}"})'>
                     {{ProjectCtrl.project.ssmTestedDonorCount | number}} donors
                 </a>
                 <span data-ng-if="ProjectCtrl.project.ssmTestedDonorCount === 0">--</span>
