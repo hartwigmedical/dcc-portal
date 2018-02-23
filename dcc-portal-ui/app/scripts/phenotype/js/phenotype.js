@@ -155,11 +155,11 @@
               });
             });
 
-          SurvivalAnalysisService.fetchSurvivalData($scope.setIds)
-            .then(function (dataSets) {
-              $scope.survivalAnalysisDataSets = dataSets;
-              SurvivalAnalysisService.dataSetToTSV(dataSets.overall);
-            });
+//          SurvivalAnalysisService.fetchSurvivalData($scope.setIds)
+//            .then(function (dataSets) {
+//              $scope.survivalAnalysisDataSets = dataSets;
+//              SurvivalAnalysisService.dataSetToTSV(dataSets.overall);
+//            });
 
         }
 

@@ -12,186 +12,185 @@
     <translate>This analysis was created against an old version of the data and may no longer be valid. Please remove or recreate it again.</translate>
 </div>
 
-<span data-ng-if="!survivalAnalysisDataSets.overall.length">
-    <i class="icon-spin icon-spinner"></i> Loading Analysis...
-</span>
+<!--<span data-ng-if="!survivalAnalysisDataSets.overall.length">-->
+    <!--<i class="icon-spin icon-spinner"></i> Loading Analysis...-->
+<!--</span>-->
 
-<div data-ng-if="survivalAnalysisDataSets.overall.length" data-disable-events="isDeprecated">
+<div><translate>Your selected donor sets</translate></div>
+<div class="wide">
+    <table class="table">
+        <thead>
+        <tr>
+            <th><translate>Set Name</translate></th>
+            <th class="text-right"><translate># Donors</translate></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="donorSet in setIds">
+            <td style="color:{{seriesColours[$index]}}">{{setMap[donorSet].name}}</th>
+            <td class="text-right"><a href="/search?filters={{setFilters[$index]}}">{{setMap[donorSet].count | number}}</a></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="clearfix"></div>
+<br>
 
-    <div><translate>Your selected donor sets</translate></div>
-    <div class="wide">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th><translate>Set Name</translate></th>
-                    <th class="text-right"><translate># Donors</translate></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-ng-repeat="donorSet in setIds">
-                    <td style="color:{{seriesColours[$index]}}">{{setMap[donorSet].name}}</th>
-                    <td class="text-right"><a href="/search?filters={{setFilters[$index]}}">{{setMap[donorSet].count | number}}</a></th>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="clearfix"></div>
-    <br>
+<!--<div data-ng-if="survivalAnalysisDataSets.overall.length" data-disable-events="isDeprecated">-->
+    <!--<div class="survival-analysis-wrapper">-->
+        <!--<h3><translate>Survival Analysis</translate></h3>-->
+        <!--<br>-->
+        <!--<div class="survival-graphs">-->
+            <!--<survival-analysis-graph-->
+                <!--data-data-sets="survivalAnalysisDataSets.overall"-->
+                <!--tip-labels="{-->
+                    <!--survivalEstimate: 'Survival estimate',-->
+                    <!--survivalTime: 'Time of death',-->
+                    <!--censoredSurvivalTime: 'Interval of last follow-up',-->
+                <!--}"-->
+                <!--censored-statuses="['alive']"-->
+                <!--palette="seriesColours"-->
+                <!--title="'Overall Survival'"-->
+                <!--pvalue="survivalAnalysisDataSets.overallStats.pvalue"-->
+                <!--on-click-export-csv="exportDonors('overall', survivalAnalysisDataSets.overall)"-->
+            <!--&gt;</survival-analysis-graph>-->
 
-    <div class="survival-analysis-wrapper">
-        <h3><translate>Survival Analysis</translate></h3>
-        <br>
-        <div class="survival-graphs">
-            <survival-analysis-graph
-                data-data-sets="survivalAnalysisDataSets.overall"
-                tip-labels="{
-                    survivalEstimate: 'Survival estimate',
-                    survivalTime: 'Time of death',
-                    censoredSurvivalTime: 'Interval of last follow-up',
-                }"
-                censored-statuses="['alive']"
-                palette="seriesColours"
-                title="'Overall Survival'"
-                pvalue="survivalAnalysisDataSets.overallStats.pvalue"
-                on-click-export-csv="exportDonors('overall', survivalAnalysisDataSets.overall)"
-            ></survival-analysis-graph>
+            <!--<survival-analysis-graph-->
+                <!--data-data-sets="survivalAnalysisDataSets.diseaseFree"-->
+                <!--tip-labels="{-->
+                    <!--survivalEstimate: 'Disease free estimate',-->
+                    <!--survivalTime: 'Time of relapse / progression',-->
+                    <!--censoredSurvivalTime: 'Interval from primary treatment to last follow-up',-->
+                <!--}"-->
+                <!--censored-statuses="['progression', 'relapse']"-->
+                <!--palette="seriesColours"-->
+                <!--title="'Disease Free Survival'"-->
+                <!--pvalue="survivalAnalysisDataSets.diseaseFreeStats.pvalue"-->
+                <!--on-click-export-csv="exportDonors('diseaseFree', survivalAnalysisDataSets.diseaseFree)"-->
+            <!--&gt;</survival-analysis-graph>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<br>-->
 
-            <survival-analysis-graph
-                data-data-sets="survivalAnalysisDataSets.diseaseFree"
-                tip-labels="{
-                    survivalEstimate: 'Disease free estimate',
-                    survivalTime: 'Time of relapse / progression',
-                    censoredSurvivalTime: 'Interval from primary treatment to last follow-up',
-                }"
-                censored-statuses="['progression', 'relapse']"
-                palette="seriesColours"
-                title="'Disease Free Survival'"
-                pvalue="survivalAnalysisDataSets.diseaseFreeStats.pvalue"
-                on-click-export-csv="exportDonors('diseaseFree', survivalAnalysisDataSets.diseaseFree)"
-            ></survival-analysis-graph>
-        </div>
-    </div>
-    <br>
+        <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+                <!--<div-->
+                    <!--style="padding: 0;"-->
+                    <!--ng-class="{-->
+                        <!--'col-md-9': intersectionsExist,-->
+                        <!--'col-md-12': !intersectionsExist-->
+                        <!--}"-->
+                <!--&gt;-->
+        <!--<table class="table survival-table">-->
+            <!--<thead>-->
+                <!--<tr>-->
+                    <!--<th></th>-->
+                    <!--<th-->
+                        <!--colspan="2"-->
+                        <!--data-ng-repeat="donorSetId in setIds"-->
+                        <!--style="white-space:normal"-->
+                    <!--&gt;-->
+                        <!--<div>-->
+                            <!--<div>-->
+                                <!--<span style="color:{{seriesColours[$index]}}">{{setMap[donorSetId].name}}</span>-->
+                            <!--</div>-->
+                            <!--<small>-->
+                                <!--<translate>Donor count</translate>: {{setMap[setIds[$index]].count | number}}-->
+                            <!--</small>-->
+                        <!--</div>-->
+                    <!--</tr>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<th>-->
+                        <!--<abbr data-icgc-tooltip="{{'Criteria to include donor from your sets in the survival analysis: <br> - donor does not overlap between your selected donor sets <br> - donor has complete data for the purpose of the analysis (event and time-to-event) <br>' | translate}}">-->
+                            <!--<translate>Donors included in Analysis</translate></abbr>-->
+                    <!--</th>-->
+                    <!--<th-->
+                        <!--data-ng-repeat-start="donorSetId in setIds"-->
+                        <!--class="text-right"-->
+                    <!--&gt;-->
+                        <!--<translate># Donors</translate>-->
+                    <!--</th>-->
+                    <!--<th-->
+                        <!--class="text-right"-->
+                        <!--data-ng-repeat-end-->
+                    <!--&gt; % </th>-->
+                <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<translate>Overall Survival Analysis</translate>-->
+                    <!--</td>-->
 
-        <div class="container-fluid">
-            <div class="row">
-                <div
-                    style="padding: 0;"
-                    ng-class="{
-                        'col-md-9': intersectionsExist,
-                        'col-md-12': !intersectionsExist
-                        }"
-                >
-        <table class="table survival-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th
-                        colspan="2"
-                        data-ng-repeat="donorSetId in setIds"
-                        style="white-space:normal"
-                    >
-                        <div>
-                            <div>
-                                <span style="color:{{seriesColours[$index]}}">{{setMap[donorSetId].name}}</span>
-                            </div>
-                            <small>
-                                <translate>Donor count</translate>: {{setMap[setIds[$index]].count | number}}
-                            </small>
-                        </div>
-                    </tr>
-                </tr>
-                <tr>
-                    <th>
-                        <abbr data-icgc-tooltip="{{'Criteria to include donor from your sets in the survival analysis: <br> - donor does not overlap between your selected donor sets <br> - donor has complete data for the purpose of the analysis (event and time-to-event) <br>' | translate}}">
-                            <translate>Donors included in Analysis</translate></abbr>
-                    </th>
-                    <th
-                        data-ng-repeat-start="donorSetId in setIds"
-                        class="text-right"
-                    >
-                        <translate># Donors</translate>
-                    </th>
-                    <th
-                        class="text-right"
-                        data-ng-repeat-end
-                    > % </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <translate>Overall Survival Analysis</translate>
-                    </td>
+                    <!--<td-->
+                        <!--class="text-right"-->
+                        <!--data-ng-repeat-start="survivalSet in survivalAnalysisDataSets.overall | orderBy: setIdOrder"-->
+                        <!--data-ng-click="viewDonors(survivalSet.donors)"-->
+                        <!--style="cursor: pointer;"-->
+                    <!--&gt;-->
+                        <!--<a>-->
+                            <!--{{ survivalSet.donors.length | number }}-->
+                        <!--</a>-->
+                    <!--</td>-->
+                    <!--<td-->
+                        <!--class="text-right"-->
+                        <!--data-ng-repeat-end-->
+                    <!--&gt;-->
+                        <!--{{ survivalSet.donors.length / survivalSet.meta.count * 100 | number: 2 }}-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<translate>Disease Free Survival Analysis</translate>-->
+                    <!--</td>-->
 
-                    <td
-                        class="text-right"
-                        data-ng-repeat-start="survivalSet in survivalAnalysisDataSets.overall | orderBy: setIdOrder"
-                        data-ng-click="viewDonors(survivalSet.donors)"
-                        style="cursor: pointer;"
-                    >
-                        <a>
-                            {{ survivalSet.donors.length | number }}
-                        </a>
-                    </td>
-                    <td
-                        class="text-right"
-                        data-ng-repeat-end
-                    >
-                        {{ survivalSet.donors.length / survivalSet.meta.count * 100 | number: 2 }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <translate>Disease Free Survival Analysis</translate>
-                    </td>
+                    <!--<td-->
+                        <!--class="text-right"-->
+                        <!--data-ng-repeat-start="survivalSet in survivalAnalysisDataSets.diseaseFree | orderBy: setIdOrder"-->
+                        <!--data-ng-click="viewDonors(survivalSet.donors)"-->
+                        <!--style="cursor: pointer;"-->
+                    <!--&gt;-->
+                        <!--<a>-->
+                            <!--{{ survivalSet.donors.length | number }}-->
+                        <!--</a>-->
+                    <!--</td>-->
+                    <!--<td-->
+                        <!--class="text-right"-->
+                        <!--data-ng-repeat-end-->
+                    <!--&gt;-->
+                        <!--{{ survivalSet.donors.length / survivalSet.meta.count * 100 | number: 2 }}-->
+                    <!--</td>-->
+                <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+                <!--</div>-->
+                <!--<div-->
+                    <!--ng-show="intersectionsExist &&-->
+                        <!--(survivalAnalysisDataSets.overall.length > 2 ||-->
+                        <!--survivalAnalysisDataSets.overall.length < 4 ) "-->
+                    <!--class="col-md-3"-->
+                <!--&gt;-->
+                    <!--<div-->
+                        <!--class="mini-venn-canvas"-->
+                        <!--ng-class="{ 'only-two': survivalAnalysisDataSets.overall.length === 2 }"-->
+                    <!--&gt;</div>-->
+                    <!--<a-->
+                        <!--class="center-block text-center full-width"-->
+                        <!--ng-href="/analysis/view/set/{{setAnalysisId}}"-->
+                        <!--target="_blank"-->
+                    <!--&gt;-->
+                        <!--<small>-->
+                            <!--<translate>Open in new tab.</translate>-->
+                            <!--<i class="icon-external-link"></i>-->
+                        <!--</small>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
-                    <td
-                        class="text-right"
-                        data-ng-repeat-start="survivalSet in survivalAnalysisDataSets.diseaseFree | orderBy: setIdOrder"
-                        data-ng-click="viewDonors(survivalSet.donors)"
-                        style="cursor: pointer;"
-                    >
-                        <a>
-                            {{ survivalSet.donors.length | number }}
-                        </a>
-                    </td>
-                    <td
-                        class="text-right"
-                        data-ng-repeat-end
-                    >
-                        {{ survivalSet.donors.length / survivalSet.meta.count * 100 | number: 2 }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-                </div>
-                <div
-                    ng-show="intersectionsExist &&
-                        (survivalAnalysisDataSets.overall.length > 2 ||
-                        survivalAnalysisDataSets.overall.length < 4 ) "
-                    class="col-md-3"
-                >
-                    <div
-                        class="mini-venn-canvas"
-                        ng-class="{ 'only-two': survivalAnalysisDataSets.overall.length === 2 }"
-                    ></div>
-                    <a
-                        class="center-block text-center full-width"
-                        ng-href="/analysis/view/set/{{setAnalysisId}}"
-                        target="_blank"
-                    >
-                        <small>
-                            <translate>Open in new tab.</translate>
-                            <i class="icon-external-link"></i>
-                        </small>
-                    </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <br>
+    <!--<br>-->
     <div data-ng-class="wide"> 
         <h3><translate>Gender Comparison</translate></h3>
         <span data-toolbar 
