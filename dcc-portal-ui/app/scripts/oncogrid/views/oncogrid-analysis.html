@@ -1,9 +1,6 @@
 <div class="og-grid-align">
   <h3>
     <translate>OncoGrid</translate>
-    <span style="font-size:1rem" class="pull-right">
-      <share-button></share-button>
-    </span>
   </h3>    
   <h5 class="analysis-subtitle"> {{ subtitle }} </h5>
 </div>
@@ -35,13 +32,6 @@
               <span class="t_tools__tool" data-ng-if="ICGC_SETTINGS.downloadEnabled">
                 <i data-icgc-tooltip="{{'Download Donor Data' | translate}}" class="icon-download" data-ng-click="OncoCtrl.downloadDonorData(item.donorSet); track('download-donor-data', { action: 'click', label: 'oncogrid' });"></i>
               </span>
-              <a class="t_tools__tool"
-                data-icgc-tooltip="{{'View in Data Repositores' | translate}}" href="{{repoLink}}">
-                <i class="icon-download-cloud"></i>
-              </a>
-              <span data-icgc-tooltip="{{'Share Saved Set' | translate}}">
-                <share-icon data-custom-popup-disclaimer="" data-share-params="donorShare" class="t_tools__tool"></share-icon>
-              </span>
             </td>
           </tr>
           <tr>
@@ -51,9 +41,6 @@
             <td style="font-size:1.25rem;">
               <span class="t_tools__tool">
                 <i class="icon-file" data-icgc-tooltip="{{'Export as TSV' | translate}}" data-ng-click="exportSet(item.geneSet)"></i>
-              </span>
-              <span data-icgc-tooltip="{{'Share Saved Set' | translate}}">
-                <share-icon data-custom-popup-disclaimer="" data-share-params="geneShare" class="t_tools__tool"></share-icon>
               </span>
             </td>
           </tr>
@@ -196,15 +183,5 @@
         <translate>Please change your donor or gene set and run the analysis again.</translate>
       </div>
     </div>
-  </div>
-  <div class="oncogrid-suggestions">
-    <a class="cta" href="mailto:dcc-support@icgc.org?Subject=Data%20Portal%20Feedback">
-      <h4 class="cta-title"><translate>Have Feedback?</translate></h4>
-      <div class="cta-detail">
-        <translate>Do you have feedback and want to help us improve this feature?</translate>
-        <br/>
-        <translate>Click here to let us know.</translate>
-      </div>
-    </a>
   </div>
 </div>
