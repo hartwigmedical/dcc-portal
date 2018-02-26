@@ -131,19 +131,9 @@
           'id': d.id,
           'age': (d.ageAtDiagnosis === undefined ? -777 : d.ageAtDiagnosis),
           'sex': (d.gender === undefined ? 'unknown' : d.gender),
-          'vitalStatus': (d.vitalStatus === undefined ? false : (d.vitalStatus === 'alive' ? true : false)),
-          'survivalTime': (d.survivalTime === undefined ? -777 : d.survivalTime),
-          'pcawg': _.has(d, 'studies') && d.studies.indexOf('PCAWG') >= 0,
-          'cnsmExists': d.cnsmExists,
-          'stsmExists': d.stsmExists,
-          'sgvExists': d.sgvExists,
-          'methArrayExists': d.methArrayExists,
-          'methSeqExists': d.methSeqExists,
-          'expArrayExists': d.expArrayExists,
-          'expSeqExists': d.expSeqExists,
-          'pexpExists': d.pexpExists,
-          'mirnaSeqExists': d.mirnaSeqExists,
-          'jcnExists': d.jcnExists
+          'cpct': true,
+          'cnsmExists': true,
+          'stsmExists': true
         };
       });
     };
@@ -217,19 +207,9 @@
         '<div class="onco-track-legend onco-age-legend" style="opacity:0.4"></div>' + 
         '<div class="onco-track-legend onco-age-legend" style="opacity:0.7"></div>' + 
         '<div class="onco-track-legend onco-age-legend" style="opacity:1"></div> 100+ <br>' + 
-      '<b>' + gettextCatalog.getString('Vital Status') + ':</b> ' +
-        gettextCatalog.getString('Deceased') + ': <div class="onco-track-legend onco-deceased-legend"></div> ' + 
-        gettextCatalog.getString('Alive') + ': <div class="onco-track-legend onco-alive-legend"></div><br>' + 
-      '<b>' + gettextCatalog.getString('Survival Time (days)') + ':</b> ' +
-        '0 <div class="onco-track-legend onco-survival-legend" style="opacity:0.05"></div>' +
-        '<div class="onco-track-legend onco-survival-legend" style="opacity:0.4"></div>' + 
-        '<div class="onco-track-legend onco-survival-legend" style="opacity:0.7"></div>' + 
-        '<div class="onco-track-legend onco-survival-legend" style="opacity:1"></div>' + 
-        maxSurvival + '<br>' + 
-      '<b>' + gettextCatalog.getString('Sex') + ':</b> ' + gettextCatalog.getString('Male') + 
+      '<b>' + gettextCatalog.getString('Sex') + ':</b> ' + gettextCatalog.getString('Male') +
       ' <div class="onco-track-legend onco-male-legend"></div> ' + 
         gettextCatalog.getString('Female') + ' <div class="onco-track-legend onco-female-legend"></div><br>';
-
       return value;
     };
 
@@ -238,31 +218,14 @@
         '<div class="onco-track-legend onco-cnsm-legend"></div> ' +
           gettextCatalog.getString('Copy Number Somatic Mutations (CNSM)') + ' <br>' +
         '<div class="onco-track-legend onco-stsm-legend"></div> ' +
-          gettextCatalog.getString('Structural Somatic Mutations (StSM)') + ' <br>' +
-        '<div class="onco-track-legend onco-sgv-legend"></div> ' +
-          gettextCatalog.getString('Simple Germline Variants (SGV)') + ' <br>' +
-        '<div class="onco-track-legend onco-metha-legend"></div> ' +
-          gettextCatalog.getString('Array-based DNA Methylation (METH-A)') + ' <br>' +
-        '<div class="onco-track-legend onco-meths-legend"></div> ' +
-          gettextCatalog.getString('Sequence-based DNA Methylation (METH-S)') + ' <br>' +
-        '<div class="onco-track-legend onco-expa-legend"></div> ' +
-          gettextCatalog.getString('Array-based Gene Expression (EXP-A)') + ' <br>' +
-        '<div class="onco-track-legend onco-exps-legend"></div> ' +
-          gettextCatalog.getString('Sequence-based Gene Expression (EXP-S)') + ' <br>' +
-        '<div class="onco-track-legend onco-pexp-legend"></div> ' +
-          gettextCatalog.getString('Protein Expression (PEXP)') + ' <br>' +
-        '<div class="onco-track-legend onco-mirna-legend"></div> ' +
-          gettextCatalog.getString('Sequence-based miRNA Expression (miRNA)') + ' <br>' +
-        '<div class="onco-track-legend onco-jcn-legend"></div> ' +
-          gettextCatalog.getString('Exon Junctions (JCN)') + ' <br>';
-                  
+          gettextCatalog.getString('Structural Somatic Mutations (StSM)') + ' <br>';
       return value;
     };
 
     _srv.studyLegend = function() {
       var value = '<b>Studies:</b> <br>' + 
         '<div class="onco-track-legend onco-pcawg-legend" style="opacity:1"></div>' +
-        gettextCatalog.getString('Donor in PCAWG Study');
+        gettextCatalog.getString('Donor in CPCT Study');
 
       return value;
     };

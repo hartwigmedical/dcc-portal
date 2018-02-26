@@ -503,8 +503,7 @@
       var donorSetParams = {
         filters: {
           donor:{
-            primarySite: {is: ['Liver']},
-            studies: {is: ['PCAWG']}
+            primarySite: {is: ['Liver']}
           },
           gene: {
             curatedSetId: {is: ['GS1']}
@@ -513,17 +512,16 @@
             functionalImpact: {is: ['High']}
           }
         },
-        size: 75,
+        size: 50,
         type: 'donor',
         isTransient: true,
-        name: 'Top 75 PCAWG Liver Donors'
+        name: 'Top 50 Liver Donors'
       };
       
       var geneSetParams = {
         filters: {
           donor:{
-            primarySite: {is: ['Liver']},
-            studies: {is: ['PCAWG']}
+            primarySite: {is: ['Liver']}
           },
           gene: {
             curatedSetId: {is: ['GS1']}
@@ -532,10 +530,10 @@
             functionalImpact: {is: ['High']}
           }
         },
-        size: 75,
+        size: 50,
         type: 'gene',
         isTransient: true,
-        name: 'Top 75 CGC Genes for Liver'
+        name: 'Top 50 Genes for Liver'
       };
 
       Page.startWork();

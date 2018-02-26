@@ -146,27 +146,10 @@
           var donorTracks = [
             { 'name': gettextCatalog.getString('Age at Enrollment'),
               'fieldName': 'age', 'type': 'int', 'sort': sortInt, 'group': 'Clinical'},
-            { 'name': gettextCatalog.getString('Vital Status'), 
-              'fieldName': 'vitalStatus', 'type': 'vital', 'sort': sortByString, 'group': 'Clinical' },
-            { 'name': gettextCatalog.getString('Survival Time'), 
-              'fieldName': 'survivalTime', 'type': 'survival', 'sort': sortInt, 'group': 'Clinical'},
             { 'name': gettextCatalog.getString('Sex'), 'fieldName': 'sex', 'type': 'sex', 'sort': sortByString, 'group': 'Clinical' },
             { 'name': 'CNSM', 'fieldName': 'cnsmExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
             { 'name': 'STSM', 'fieldName': 'stsmExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'SGV', 'fieldName': 'sgvExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'METH-A' , 
-              'fieldName': 'methArrayExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'METH-S', 
-              'fieldName': 'methSeqExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'EXP-A', 
-              'fieldName': 'expArrayExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'EXP-S', 
-              'fieldName': 'expSeqExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'PEXP', 'fieldName': 'pexpExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'miRNA-S', 
-              'fieldName': 'mirnaSeqExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'JCN', 'fieldName': 'jcnExists', 'type': 'bool', 'sort': sortBool, 'group': 'Data Types' },
-            { 'name': 'PCAWG', 'fieldName': 'pcawg', 'type': 'bool', 'sort': sortBool, 'group': 'Study' }
+            { 'name': 'CPCT', 'fieldName': 'cpct', 'type': 'bool', 'sort': sortBool, 'group': 'Study' }
           ];
 
           var maxSurvival = _.max(_.map(donors, function(d) { return d.survivalTime } ));
@@ -187,7 +170,7 @@
 
           var geneTracks = [
             { 'name': gettextCatalog.getString('# Donors affected '),
-               'fieldName': 'totalDonors', 'type': 'int', 'sort': sortInt, 'group': 'ICGC' },
+               'fieldName': 'totalDonors', 'type': 'int', 'sort': sortInt, 'group': 'CPCT' },
             { 'name': gettextCatalog.getString('Curated Gene Census '),
                'fieldName': 'cgc', 'type': 'bool', 'sort': sortBool, 'group': 'Gene Sets'}
           ];
@@ -241,7 +224,7 @@
           };
 
           var trackLegends = {
-            'ICGC': OncogridService.icgcLegend(maxDonorsAffected),
+            'CPCT': OncogridService.icgcLegend(maxDonorsAffected),
             'Gene Sets': OncogridService.geneSetLegend(),
             'Clinical': OncogridService.clinicalLegend(maxSurvival),
             'Data Types': OncogridService.dataTypeLegend(),
