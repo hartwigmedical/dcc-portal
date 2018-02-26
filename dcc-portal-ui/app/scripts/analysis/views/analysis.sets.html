@@ -89,13 +89,6 @@
                             <span class="t_tools__tool" data-ng-if="ICGC_SETTINGS.downloadEnabled && item.type==='donor'">
                                 <i data-icgc-tooltip="{{'Download Donor Data' | translate}}" class="icon-download" data-ng-click="SavedSetController.downloadDonorData(item.id); track('download-donor-data', { action: 'click', label: 'set analysis' });"></i>
                             </span>
-                            <a data-ng-if="item.type==='donor' || item.type==='file'" class="t_tools__tool"
-                              data-icgc-tooltip="{{'View in [[:: dataRepoTitle ]]' | translate | subDelimiters:{dataRepoTitle: SavedSetController.dataRepoTitle} }}" href="{{item.repoLink}}">
-                              <i class="icon-download-cloud"></i>
-                            </a>
-                            <span>
-                                <share-icon data-custom-popup-disclaimer="" data-share-params="SavedSetController.getEntitySetShareParams(item)" class="t_tools__tool"></share-icon>
-                            </span>
                         </span>
                     </td>
                     <td colspan="2" data-ng-if="item.state !== 'FINISHED'">
