@@ -250,8 +250,6 @@
             <tr>
                 <th><translate>Project</translate></th>
                 <th><translate>Site</translate></th>
-                <th><translate>Tumour Type</translate></th>
-                <th><translate>Tumour Subtype</translate></th>
                 <th style="cursor: pointer"
                     data-ng-click="sortProjectsDescendingly = ! sortProjectsDescendingly">
                     <abbr data-icgc-tooltip="{{'# donors in current project with [[geneSymbol]] affected by SSM / # SSM-tested donors in current project' | translate | subDelimiters:{geneSymbol: GeneCtrl.gene.symbol} }}">
@@ -272,8 +270,6 @@
                     <span data-ng-bind-html="project.uiId | highlight: GeneCtrl.tableFilter.projects"></span>
                 </a></td>
                 <td><span data-ng-bind-html="project.uiPrimarySite | highlight: GeneCtrl.tableFilter.projects"></span></td>
-                <td><span data-ng-bind-html="project.uiTumourType | highlight: GeneCtrl.tableFilter.projects"></span></td>
-                <td><span data-ng-bind-html="project.uiTumourSubtype | highlight: GeneCtrl.tableFilter.projects"></span></td>
                 <td class="text-right" style="position: relative; display: block">
 
                         <span data-ng-style="{width:project.uiAffectedDonorPercentage+'%'}"
@@ -315,8 +311,6 @@
             <tr>
                 <th><translate>Project</translate></th>
                 <th><translate>Site</translate></th>
-                <th><translate>Tumour Type</translate></th>
-                <th><translate>Tumour Subtype</translate></th>
                 <th>
                     <translate>Number of donors with the current gene containing simple somatic mutations in the current project</translate>
                 </th>
@@ -329,8 +323,6 @@
             <tr data-ng-repeat="project in GeneCtrl.gene.projects.hits | orderBy:'summary.uiAffectedDonorPercentage':true">
                 <td>{{project.name}}</td>
                 <td>{{project.primarySite}}</td>
-                <td>{{project.tumourType}}</td>
-                <td>{{project.tumourSubtype}}</td>
                 <td>{{project.affectedDonorCount}}</td>
                 <td>{{project.ssmTestedDonorCount}}</td>
                 <td>{{project.uiAffectedDonorPercentage}}</td>
