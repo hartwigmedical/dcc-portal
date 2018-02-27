@@ -32,7 +32,6 @@
         <tr>
             <th><translate>Sample ID</translate></th>
             <th><translate>Platform</translate></th>
-            <th><translate>Verification Status</translate></th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -63,11 +62,6 @@
             </td>
             <td>
                <ul>
-                   <li data-ng-repeat="observation in occurrence.observations">{{observation.verificationStatus | readable }}</li>
-               </ul>
-            </td>
-            <td>
-               <ul>
                    <li data-ng-repeat="observation in occurrence.observations">
                        <a data-ng-click="AdvancedCtrl.viewObservationDetail(observation)" href="">Details</a>
                    </li>
@@ -89,7 +83,6 @@
             <th><translate>DNA change</translate></th>
             <th><translate>Sample ID</translate></th>
             <th><translate>Platform</translate></th>
-            <th><translate>Verification Status</translate></th>
         </tr>
         </thead>
         <tbody>
@@ -100,7 +93,6 @@
             <td>chr{{occurrence.chromosome}}:g.{{occurrence.start}}{{occurrence.mutation}}</td>
             <td>{{ (occurrence.observations | _:"map":'icgcSampleId').join(',') }}</td>
             <td>{{ (occurrence.observations | _:"map":'platform').join(',') }}</td>
-            <td>{{ (occurrence.observations | _:"map":'verificationStatus').join(',') }}</td>
         </tr>
         </tbody>
     </table>
