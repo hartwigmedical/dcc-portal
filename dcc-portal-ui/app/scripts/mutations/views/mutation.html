@@ -218,9 +218,7 @@
             <tr>
                 <th><translate>Project</translate></th>
                 <th><translate>Site</translate></th>
-                <th><translate>Tumour Type</translate></th>
-                <th><translate>Tumour Subtype</translate></th>
-                <th style="cursor: pointer" 
+                <th style="cursor: pointer"
                     data-ng-click="sortProjectsDescendingly = ! sortProjectsDescendingly">
                     <abbr 
                         data-icgc-tooltip="{{'Breakdown of Donors affected by [[ mutationId ]] <br># Donors where [[ mutationId ]] observed / # SSM tested Donors' | translate | subDelimiters:{mutationId: MutationCtrl.mutation.id} }}"
@@ -241,12 +239,6 @@
                 </a></td>
                 <td>
                     <span data-ng-bind-html="project.uiPrimarySite | highlight: MutationCtrl.tableFilter.projects"></span>
-                </td>
-                <td>
-                    <span data-ng-bind-html="project.uiTumourType | highlight: MutationCtrl.tableFilter.projects"></span>
-                </td>
-                <td>
-                    <span data-ng-bind-html="project.uiTumourSubtype | highlight: MutationCtrl.tableFilter.projects"></span>
                 </td>
                 <td class="text-right" style="position: relative">
                     <span data-ng-style="{width:project.uiPercentAffected+'%'}"
@@ -281,8 +273,6 @@
             <tr>
                 <th><translate>Project</translate></th>
                 <th><translate>Site</translate></th>
-                <th><translate>Tumour Type</translate></th>
-                <th><translate>Tumour Subtype</translate></th>
                 <th><translate>Number of donors from the current project containing the current mutation</translate></th>
                 <th><translate>Number of SSM-tested donors in the current project</translate></th>
                 <th><translate>Percentage of donors with the current mutation</translate></th>
@@ -292,8 +282,6 @@
             <tr data-ng-repeat="project in MutationCtrl.projects | orderBy:'-percentAffected'">
                 <td>{{project.name}}</td>
                 <td>{{project.primarySite}}</td>
-                <td>{{project.tumourType}}</td>
-                <td>{{project.tumourSubtype}}</td>
                 <td>{{project.affectedDonorCount}}</td>
                 <td>{{project.ssmTestedDonorCount}}</td>
                 <td>{{project.affectedDonorCount/project.ssmTestedDonorCount}}</td>
