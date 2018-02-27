@@ -31,11 +31,6 @@
         <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='id'" class="icon-sort"></i>
         <i data-ng-if="predicate==='id'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
     </th>
-    <th rowspan="2" style="cursor: pointer" data-ng-click="predicate='name'; reverse=!reverse">
-        <translate>Name</translate>
-        <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='name'" class="icon-sort"></i>
-        <i data-ng-if="predicate==='name'" class="{{reverse? 'icon-sort-down' : 'icon-sort-up'}}"></i>
-    </th>
     <th rowspan="2" style="cursor: pointer" data-ng-click="predicate='primarySite'; reverse=!reverse">
         <translate>Site</translate>
         <i style="color:hsl(0,0%,80%)" data-ng-if="predicate!='primarySite'" class="icon-sort"></i>
@@ -86,7 +81,6 @@
     <td style="white-space: nowrap">
       <a data-ui-sref="project ({id: project.id})">{{:: project.id }}</a>
     </td>
-    <td>{{:: project.name }}</td>
     <td>{{:: project.primarySite }}</td>
 
     <td style="text-align: center; vertical-align: middle;">
@@ -107,7 +101,7 @@
   </tr>
 
   <tr>
-    <td colspan="4"><strong><translate>Total</translate></strong></td>
+    <td colspan="3"><strong><translate>Total</translate></strong></td>
 
     <td class="text-right" ng-repeat="data in ProjectsCtrl.totals">
         <loading-block ng-if="!ProjectsCtrl.shouldRenderDeferredItems"></loading-block>
@@ -126,7 +120,6 @@
     <thead>
     <tr>
         <th><translate>Project Code</translate></th>
-        <th><translate>Project Name</translate></th>
         <th><translate>Primary Site</translate></th>
         <th><translate>Country</translate></th>
         <th><translate>Donors (DCC)</translate></th>
@@ -139,7 +132,6 @@
     <tbody>
     <tr data-ng-repeat="project in ProjectsCtrl.projects.hits track by project.id">
         <td>{{project.id}}</td>
-        <td>{{project.name}}</td>
         <td>{{project.primarySite}}</td>
         <td>{{project.primaryCountries.join(', ')}}</td>
         <td>{{project.totalLiveDonorCount}}</td>
