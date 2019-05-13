@@ -212,7 +212,7 @@ public class SearchRepository {
   @NonNull
   @SuppressWarnings("deprecation")
   public SearchResponse findAll(Query query, String type) {
-    log.debug("Requested search type is: '{}'.", type);
+    log.info("Requested search type is: '{}'. on index {} and repository index {}", type, indexName, repoIndexName);
 
     val typeBoolFilter = boolQuery().mustNot(typeQuery("donor-text"));
     val indicesFilterBuilder = QueryBuilders.indicesQuery(typeBoolFilter, repoIndexName);
