@@ -1,7 +1,7 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-<ShortName>HMF Data Portal</ShortName>
+<ShortName>Hartwig Medical Database</ShortName>
 <Description>
-    The HMF Data Portal provides tools for visualizing, querying and downloading the data released quarterly by the consortium's member projects.
+    The Hartwig Medical Database provides tools for visualizing, querying and downloading the data released quarterly by the consortium's member projects.
 </Description>
 <InputEncoding>UTF-8</InputEncoding>
 <Image width="16" height="16" type="image/x-icon">

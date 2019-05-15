@@ -238,7 +238,7 @@ msgid "<em>Select 1 Gene set <small>(100 genes maximum)</small> and 1 Donor set 
 msgstr ""
 
 #: app/scripts/common/views/header.html:5
-msgid "<span id=\"icgc\">HMF</span> Data Portal"
+msgid "<span id=\"icgc\">Hartwig Medical</span> Database"
 msgstr ""
 
 #: app/scripts/repository/views/repository.external.file.html:262
@@ -2327,7 +2327,7 @@ msgid "ICCG Compute Cloud Partners"
 msgstr ""
 
 #: app/scripts/common/views/footer.html:51
-msgid "HMF Data Portal"
+msgid "Hartwig Medical Database"
 msgstr ""
 
 #: app/scripts/beacon/views/beacon.html:3
@@ -4923,7 +4923,7 @@ msgid "The ICGC DCC offers a standalone virtual machine that allows you to local
 msgstr ""
 
 #: app/scripts/static/views/info.html:74
-msgid "The HMF Data Portal uses gene models produced by Ensembl (<a href=\"http://www.ensembl.org\">http://www.ensembl.org</a>)."
+msgid "The Hartwig Medical Database uses gene models produced by Ensembl (<a href=\"http://www.ensembl.org\">http://www.ensembl.org</a>)."
 msgstr ""
 
 #: app/scripts/repositories/views/home.html:14
