@@ -458,11 +458,11 @@
 
 
     $stateProvider.state(
-      'team', {
-        url: '/team',
-        templateUrl: '/scripts/static/views/team.html',
+      'terms-and-conditions', {
+        url: '/terms-and-conditions',
+        templateUrl: '/scripts/static/views/terms-and-conditions.html',
         controller: function (Page, gettextCatalog) {
-          Page.setTitle(gettextCatalog.getString('The Team'));
+          Page.setTitle(gettextCatalog.getString('Terms and Conditions'));
           Page.setPage('entity');
         }
       });
