@@ -96,12 +96,13 @@ public class SearchConfig {
 
   @Bean
   public Versions versions() {
-    return new Versions(
-        getApiVersion(),
-        getApplicationVersion(),
-        getCommitId(),
-        firstNonNull(releaseIndexMetadata().get("git.commit.id.abbrev"), "unknown"),
-        indexName());
+    //return new Versions(
+    //    getApiVersion(),
+    //    getApplicationVersion(),
+    //    getCommitId(),
+    //    firstNonNull(releaseIndexMetadata().get("git.commit.id.abbrev"), "unknown"),
+    //    indexName());
+    return new Versions(getApiVersion(), getApplicationVersion(), "ab350a922", "1.0", "versions");
   }
 
   private String resolveIndexName(String indexName) {
