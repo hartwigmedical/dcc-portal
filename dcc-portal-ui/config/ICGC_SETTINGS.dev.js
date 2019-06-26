@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 
 module.exports = {
-    "releaseDate": "May 1, 2019",
+    "releaseDate": "April 1, 2018",
     "dataVersion": 2,
     "downloadEnabled": false,
     "authEnabled": true,
