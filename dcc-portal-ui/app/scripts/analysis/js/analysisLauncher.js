@@ -222,8 +222,8 @@
           setTypeLimit('gene', 1),
           setTypeLimit('donor', 1),
           setTypesCriterium(['gene', 'donor']),
-          itemLimitForSetTypeCriterium(200, 'gene'),
-          itemLimitForSetTypeCriterium(5000, 'donor'),
+          itemLimitForSetTypeCriterium(50, 'gene'),
+          itemLimitForSetTypeCriterium(500, 'donor'),
         ],
         launchDemo: () => _this.demoOncogrid(),
         launch: selectedSets => _this.launchOncogridAnalysis({
