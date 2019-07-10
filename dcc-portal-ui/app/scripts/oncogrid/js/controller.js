@@ -120,8 +120,8 @@ import OncoGrid from 'oncogrid';
         $scope.filters = filters;
         $scope.isLaunchingOncoGrid = false;
 
-        $scope.maxDonorsLimit = 5000;
-        $scope.maxGenesLimit = 200;
+        $scope.maxDonorsLimit = 500;
+        $scope.maxGenesLimit = 50;
 
         $scope.params = {};
         $scope.hasValidParams = false;

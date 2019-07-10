@@ -547,8 +547,8 @@ angular.module('icgc.advanced.controllers', [
           templateUrl: '/scripts/oncogrid/views/oncogrid.upload.html',
           controller: 'OncoGridUploadController',
           resolve: {
-            donorsLimit: () => _controller.Donor.donors.pagination.total,
-            genesLimit: () => _controller.Gene.genes.pagination.total,
+            donorsLimit: () => 500,
+            genesLimit: () => 50,
             filters: () => LocationService.filters()
           }
         });
