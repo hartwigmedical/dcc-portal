@@ -123,7 +123,7 @@ public class OpenIDResource extends Resource {
     val user = openidService.verify(token, receivingUrl, parameterList, redirect);
 
     return Response
-        .seeOther(redirect)
+        //.seeOther(redirect)
         .header(SET_COOKIE, String.format(RESPONSE_HEADER_VALUE_TEMPLATE, setSessionCookie(user).toString()))
         .build();
   }
