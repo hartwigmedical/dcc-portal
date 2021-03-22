@@ -83,7 +83,7 @@
 
         function handleShow(evt, params) {
           if (params.text) {
-            scope.html = $sce.trustAsHtml(params.text);
+            scope.html = $sce.getTrustedHtml(params.text);
           }
           if (params.placement) {
             scope.placement = params.placement;
