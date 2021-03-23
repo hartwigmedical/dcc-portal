@@ -115,16 +115,7 @@ public class OpenIDResource extends Resource {
       @Context HttpServletRequest request,
       @QueryParam(TOKEN_PARAM_NAME) String token,
       @QueryParam(REDIRECT_PARAM_NAME) URI redirect) {
-
-    // Extract the parameters from the authentication response which comes in as a HTTP request from the OpenID provider
-    val parameterList = new ParameterList(request.getParameterMap());
-    val receivingUrl = getReceivingUrl(request);
-    log.debug("[{}] ReceivingUrl - {}", token, receivingUrl);
-    val user = openidService.verify(token, receivingUrl, parameterList, redirect);
-
-    return Response
-        .header(SET_COOKIE, String.format(RESPONSE_HEADER_VALUE_TEMPLATE, setSessionCookie(user).toString()))
-        .build();
+    return Response.ok().build();
   }
 
   private static String getReceivingUrl(HttpServletRequest request) {
