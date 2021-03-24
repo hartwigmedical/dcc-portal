@@ -1,4 +1,6 @@
 steps:
+- name: gcr.io/cloud-builders/git
+  args: ['fetch', '--unshallow']
 - name: 'eu.gcr.io/$PROJECT_ID/hmf-icgc-image-builder:latest'
   args: ['mvn', '-pl', 'dcc-portal-server', '-Dmaven.test.skip=true']
   id: mvn
