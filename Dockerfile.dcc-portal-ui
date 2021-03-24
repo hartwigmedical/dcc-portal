@@ -1,0 +1,15 @@
+FROM maven:3.5.0-jdk-8
+COPY  . /usr/src/app/
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y nodejs build-essential
+RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update && apt-get install yarn
+RUN npm install semver
+RUN npm install json
+RUN mvn -Denforcer.skip=true -DskipTests -f /usr/src/app/dcc-portal-ui/pom.xml clean package
+#FROM openjdk:8-jdk-alpine
+#RUN apk add npm
+#COPY --from=build /usr/src/app/dcc-portal-ui/target/dcc-portal-ui-5.2.13-SNAPSHOT.jar /usr/app/dcc-portal-ui-5.2.13-SNAPSHOT.jar
+#COPY --from=build /usr/src/app/dcc-portal-ui/* /usr/local/src/
+
